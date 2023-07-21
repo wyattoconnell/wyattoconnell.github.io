@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        
+        <!--icons-->
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <!--fonts-->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Prata&family=Yeseva+One&display=swap" rel="stylesheet">
+        <!--<link rel="stylesheet" href="style.css">-->
+        <!--scss-->
+            <link rel="stylesheet" href="style.css">
+        <!--css-->
+            <link rel="stylesheet" href="tweaks.css">
+    
+        <title>Wyatt's Personal Website</title>
+    </head>
+    <body>
+        <!--NAVBAR-->
+        <nav class="navbar navbar-expand-md navbar-light sticky-top" style="background-color: rgba(29, 52, 1, 0.4);">
+            <div class="container">
+                    <a href="#" class="navbar-brand" >
+                        <img class="pb-2" src="resources/favpng_clip-art-log-cabin-vector-graphics-image.png" alt="" width="27" height="32" >
+                    </a>
+    
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="color:black">
+                        <i class="bi bi-list text-black" style="opacity:1;"></i>
+                      </button>
+                    
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item icon-link">
+                                <a href="#projects" class="nav-link text-black" style="font-family: 'Yeseva One', cursive; opacity:1;">
+                                    projects
+                                </a>
+                            </li>
+                            <li class="nav-item icon-link">
+                                <a href="https://www.linkedin.com/in/wyatt-o-connell-299185240/" class="nav-link">
+                                    <i class="linkd bi bi-linkedin text-black" style="opacity:1;"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/wyattoconnell" class="nav-link">
+                                    <i class="bi bi-github text-black" style="opacity:1;"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+            </div>
+        </nav>
+    
+        <!--TOP PANEL-->
+        <section class="topPanel p-4 ps-5 pt-5 bg-light">
+            <div class="name">
+                <div class="wyatt">
+                    <h1 class="display-1 text-dark">
+                        wyatt
+                        </h1>
+                </div>
+                <div class="oconnell">
+                    <h1 class="display-1 text-dark">
+                        o’connell 
+                        </h1>
+                </div>
+            </div>
+        </section>
+    
+        <!--Bio-->
+        <section class="bg-light" style="font-family: 'Nunito Sans', sans-serif;">
+            <div class="d-sm-flex flex-row text-black">
+                <div class="col p-5 pt-4">
+                    <img src="resources/MyProject.png" class="me-image p-2 pe-3" alt="image not found">
+                    <div class="about">
+                        Hi, I’m Wyatt: an out-of-the-box, proactive problem-solver with a passion and aptitude for the creative aspects of programming. 
+                        I’m looking for an opportunity to learn from talented colleagues, set goals, accomplish them, and apply my skills to a concrete product to be shared with the world. I’m most comfortable with Java, Python, HTML, and CSS, but I’m constantly learning new skills and refining old ones. In my spare time, I like to mountain bike and play tennis. 
+                    </div>
+                </div>
+                <div class="col p-4">
+                    <dl class="row">
+                        <dt class="col-md-4">Education:</dt>
+                        <dt class="col-md-8">
+                            <figure>
+                                <p>The Thacher School CdeP '21</p>
+                                <p>University of Virginia '25</p>
+                                <figcaption class="blockquote-footer">
+                                    <small>Computer Science Major, Technology Entrepreneurship Minor</small>
+                                </figcaption>
+                            </figure>
+                        </dt>
+                        <dt class="col-md-4">Hometown:</dt>
+                        <dd class="col-md-8">
+                          <p>San Anselmo, CA</p>
+                        </dd>
+                        <dt class="col-md-12">
+                            <div class="pt-2">
+                                <a href="resources/Resume-WyattOconnell.pdf" class="text-decoration-none">
+                                    <button class="download text-light"type="button">Download Full Resume</button>
+                                </a> 
+                            </div>
+                        </dt>
+                    </dl>
+                </div>
+            </div>
+        </section">
+
+        <!--Train-->
+        <div class="pt-2">
+            <div class="steam-engine fixed-bottom" style="opacity:0;"></div>
+        </div>
+
+        <!--Relevant Courses-->
+        <section class="text-black p-4 bg-light" style="font-family: 'Nunito Sans', sans-serif">
+            <div class="container">
+                <h2 class="pt-2 pb-4 text-dark" style="font-family: 'Yeseva One', cursive; opacity: 0.5;">
+                relevant coursework
+                </h2>
+            </div>
+            <div class="accordion accordion-flush">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-light text-black" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    Data Structures and Algorithms I & II
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse bg-light text-black" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <div class="d-sm-flex flex-row text-black">
+                            <ul> 
+                                <h5>Key Concepts </h5>
+                                <li>Data Structures</li>
+                                <li>Algorithms</li>
+                                <li>Program Analysis</li>
+                            </ul> 
+                            <ul>
+                                <h5>Tools </h5>
+                                <li>Java</li>
+                                <li>Eclipse</li>
+                            </ul> 
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed bg-light text-black" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    Intro to Data Science with Python
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body bg-light text-black">
+                        <div class="d-sm-flex flex-row text-black">
+                            <ul> 
+                                <h5>Key Concepts </h5>
+                                <li>Various Modeling Techniques</li>
+                                <li>Data Analysis</li>
+                            </ul> 
+                            <ul>
+                                <h5>Tools </h5>
+                                <li>Python</li>
+                                <li>Jupyter Notebook</li>
+                            </ul> 
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed bg-light text-black" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    Computer Systems and Organization I
+                    </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body bg-light text-black">
+                        <div class="d-sm-flex flex-row text-black">
+                            <ul> 
+                                <h5>Key Concepts </h5>
+                                <li>Understanding how C becomes assembly</li>
+                                <li>Understanding how assembly is run by a computer</li>
+                                <li>How data is stored</li>
+                            </ul> 
+                            <ul>
+                                <h5>Tools </h5>
+                                <li>C</li>
+                                <li>Vim</li>
+                                <li>Git</li>
+                            </ul> 
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingFour">
+                      <button class="accordion-button collapsed bg-light text-black" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                    Discrete Math and Theory I
+                      </button>
+                    </h2>
+                    <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body bg-light text-black">
+                        <div class="d-sm-flex flex-row text-black">
+                            <ul> 
+                                <h5>Key Concepts </h5>
+                                <li>Crafting proofs of predicate and propositional logic</li>
+                            </ul> 
+                            <ul>
+                                <h5>Tools </h5>
+                                <li>Lean</li>
+                                <li>VSCode</li>
+                                <li>Git</li>
+                            </ul> 
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingFive">
+                      <button class="accordion-button collapsed bg-light text-black" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                    Software Development Essentials
+                      </button>
+                    </h2>
+                    <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body bg-light text-black">
+                        <div class="d-sm-flex flex-row text-black">
+                            <ul> 
+                                <h5>Key Concepts </h5>
+                                <li>Designing functional and object oriented systems</li>
+                                <li>Front-end software and Graphical user interphases</li>
+                                <li>Back-end software and database design</li>
+                            </ul> 
+                            <ul>
+                                <h5>Tools </h5>
+                                <li>Java</li>
+                                <li>IntelliJ</li>
+                                <li>Git</li>
+                                <li>JavaFX</li>
+                            </ul> 
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+        </section>
+    
+        <!--Projects-->
+        <section id="projects" class="bg-white text-black">
+            <section class="bg-light text-black p-4">
+                <div class="container">
+                    <h2 class="pt-2 pb-5 text-dark" style="font-family: 'Yeseva One', cursive; opacity: 0.5;">
+                    open source contributions
+                    </h2>
+                </div>
+                <table class="table-light">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </section>
+            <section class="bg-light text-black p-4">
+                <div class="container">
+                    <h2 class="pt-2 pb-3 text-dark" style="font-family: 'Yeseva One', cursive; opacity: 0.5;">
+                    projects
+                    </h2>
+                </div>
+                <div class="d-sm-flex flex-row text-black">
+                    <div class="col">
+                    <div class="py-4">
+                        <div class="card" style="background-color: rgba(1, 52, 24, 0.4);">
+                            <div class="card-body">
+                            <h5 class="card-title text-light">Personal Website</h5>
+                            <p class="card-text text-light">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <div class="d-flex flex-row text-black">
+                                <div class="pb-">
+                                    <button type="button" class="btn btn-outline-light">Check It Out</button>
+                                </div>    
+                                <a href="#">
+                                    <i class="git1 bi bi-github text-light p-3" style="font-size: 25px;"> </i>
+                                </a>
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="py-4">
+                        <div class="card" style="background-color: rgba(1, 52, 24, 0.4);">
+                            <div class="card-body text-light">
+                            <h5 class="card-title">Spotify Web App</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <div class="d-flex flex-row">
+                                <div class="pb-">
+                                    <button type="button" class="btn btn-outline-light">Check It Out</button>
+                                </div>    
+                                <a href="#">
+                                    <i class="git2 bi bi-github text-light p-3" style="font-size: 25px;"> </i>
+                                </a>
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+                    </div>
+                </div>
+        </section>
+    
+        <footer class="text-center text-dark bg-light">
+            by Wyatt O'Connell
+        </footer>
+    
+    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+        
+    </body>
+</html>

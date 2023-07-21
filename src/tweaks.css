@@ -1,0 +1,78 @@
+.root{
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.wyatt,
+.oconnell {
+  transition: transform 5s;
+  opacity: 0.5;
+
+}
+
+.name:hover .wyatt{
+  transform: translateY(100%);
+}
+
+.name:hover .oconnell {
+  transform: translateY(-100%);
+}
+
+.me-image {
+    width: 185px;
+    float: left;
+    shape-outside: padding-box;
+}
+
+.name{
+  font-family: 'Yeseva One', cursive;
+  size: 175px;
+}
+
+.download{
+  color: black;
+  border: none;
+  background-color: rgba(1, 52, 24, 0.4);
+  text-decoration: none;
+  font-size: 17px;
+  padding: 7px 12px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.download:hover{
+  background-color: rgba(1, 52, 24, 0.3);
+  color:rgba(0,0,0,.75);
+}
+
+.git1:hover{
+  opacity: 0.5;
+}
+
+.git2:hover{
+  opacity: 0.5;
+}
+
+.divider {
+  border: none;
+  height: 2px;
+  background-color: #000; 
+}
+
+.steam-engine {
+  width: 200px;
+  height: 45px;
+  background-image: url(resources/steam-engine.png); 
+  background-repeat: no-repeat;
+  background-size: fill;
+  animation: steamEngineAnim 30s linear infinite; 
+  transform: scaleX(-1); 
+}
+
+@keyframes steamEngineAnim {
+  0% {
+    transform: translateX(-100%); 
+  }
+  100% {
+    transform: translateX(750%); 
+  }
+}
