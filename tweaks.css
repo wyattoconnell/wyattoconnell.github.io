@@ -23,6 +23,16 @@
     shape-outside: padding-box;
 }
 
+.comp-image {
+  height: 400px;
+  width: auto;
+}
+
+.phone-image {
+  height: 400px;
+  width: auto;
+}
+
 .name{
   font-family: 'Yeseva One', cursive;
   size: 175px;
