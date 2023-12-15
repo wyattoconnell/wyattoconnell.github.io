@@ -33,6 +33,16 @@
   width: auto;
 }
 
+.home-image {
+  height: 400px;
+  width: auto;
+}
+
+.submit-image {
+  height: 400px;
+  width: auto;
+}
+
 .name{
   font-family: 'Yeseva One', cursive;
   size: 175px;
