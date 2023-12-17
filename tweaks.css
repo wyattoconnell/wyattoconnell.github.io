@@ -43,6 +43,11 @@
   width: auto;
 }
 
+.wordle-image {
+  height: 200px;
+  width: auto;
+}
+
 .name{
   font-family: 'Yeseva One', cursive;
   size: 175px;
