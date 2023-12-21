@@ -1,72 +1,243 @@
 .root{
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.navbar{
+  display: none;
+}
+
+.mobile-projects{
+  display: none;
+}
+
+.projects{
+  display: block;
 }
 
 .wyatt,
 .oconnell {
   transition: transform 5s;
-  opacity: 0.5;
-
+  opacity: 0.7;
+  text-shadow:0 0px 0 black;
 }
 
-.name:hover .wyatt{
-  transform: translateY(100%);
-}
-
-.name:hover .oconnell {
-  transform: translateY(-100%);
+.about, .coursework{
+  height: 150vh; 
+  overflow: auto;
 }
 
 .me-image {
     width: 185px;
+    height: auto;
     float: left;
     shape-outside: padding-box;
 }
 
-.comp-image {
-  height: 400px;
-  width: auto;
+.menu a{
+  transition: transform 0.5s ease;
+  text-shadow:0 0px 0 black;
+}
+
+.menu a:hover {
+  text-shadow:5px 5px 0 rgba(128, 128, 128, 0.74);
+  transform: translate(-3px, -3px);
+}
+
+nav a.active {
+  text-shadow:5px 5px 0 rgba(128, 128, 128, 0.74);
+  transform: translate(-3px, -3px);
+}
+
+.everything{
+  height: 100vh;
+  overflow: hidden;
+  overflow-y:auto;
+  scrollbar-width: none;
+}
+
+.everything::-webkit-scrollbar {
+  display: none;
+}
+
+.gui::-webkit-scrollbar,  .django::-webkit-scrollbar, .niche::-webkit-scrollbar, .portfol::-webkit-scrollbar, .about::-webkit-scrollbar, .coursework::-webkit-scrollbar{
+  display: none;
 }
 
 .phone-image {
-  height: 400px;
-  width: auto;
+  height: auto;
+  width: 25vw;
 }
 
-.home-image {
-  height: 300px;
-  width: auto;
-}
-
-.submit-image {
-  height: 300px;
+.home-image, .submit-image, .comp-image {
+  height: auto;
   width: auto;
 }
 
 .wordle-image {
-  height: 200px;
-  width: auto;
+  height: auto;
+  width: 18vw;
 }
 
 .name{
   font-family: 'Yeseva One', cursive;
-  size: 175px;
+  width: 100%;
+}
+
+.bio{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  padding: 50px;
+  padding-right: 0px;
+  font-family: 'Josefin Sans', sans-serif; 
 }
 
 .download{
   color: black;
   border: none;
-  background-color: rgba(1, 52, 24, 0.4);
+  width: auto;
+  background-color: rgba(1, 52, 24, 0.7);
   text-decoration: none;
   font-size: 17px;
   padding: 7px 12px;
   cursor: pointer;
   border-radius: 6px;
+  display: none;
 }
 
 .download:hover{
   background-color: rgba(1, 52, 24, 0.3);
   color:rgba(0,0,0,.75);
+}
+
+.comic{
+  height: 80vh;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  grid-gap: 10px;
+}
+
+.portfol:hover, .gui:hover, .django:hover, .niche:hover{
+  margin: +10px;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.portfol{
+  grid-column-start: 2;
+  grid-column-end: 6;
+  grid-row-start: 2;
+  grid-row-end: 5;
+  transition: all 1s;
+  -webkit-transition: all 1s;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.portfol.portfol-hovered{
+  width: calc(100% + 11.5vw);
+  height: calc(100% + 17vh);
+  opacity: 1;
+  overflow: auto;
+  margin-top: -10px;
+  scrollbar-color: rgba(1, 52, 24, 0.7);
+}
+
+.niche{
+  grid-column: span 4;
+  grid-row-start: 1;
+  grid-row-end: 5;
+  transition: all 1s;
+  -webkit-transition: all 1s;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.niche.niche-hovered {
+  width: calc(100% + 30vw);
+  height: calc(100% + 55vh);
+  margin: -10px;
+  margin-left: +10px;
+  opacity: 1;
+  overflow: auto;
+  scrollbar-color: rgba(1, 52, 24, 0.7);
+}
+
+.django{
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row: span 5;
+  transition: all 1s;
+  -webkit-transition: all 1s;
+  overflow: hidden;
+  scrollbar-color: rgba(1, 52, 24, 0.7);
+  text-overflow: ellipsis;
+}
+
+.django.django-hovered{
+  width: calc(100% + 30vw);
+  height: calc(100% + 50vh);
+  margin: -10px;
+  margin-top: +10px;
+  opacity: 1;
+  overflow: auto;
+  scrollbar-color: rgba(1, 52, 24, 0.7);
+}
+
+
+.gui{
+  grid-column: span 6;
+  grid-row: span 3;
+  transition: all 1s;
+  -webkit-transition: all 1s;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.gui.gui-hovered{
+  height: calc(100% + 40vh);
+  margin: 10px;
+  opacity: 1;
+  overflow: auto;
+  scrollbar-color: rgba(1, 52, 24, 0.7);
+}
+
+
+.body1, .body2, .body3, .body4{
+  visibility: hidden;
+}
+
+.p2, .p3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 5; 
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.p1, .p4{
+  display: -webkit-box;
+  -webkit-line-clamp: 3; 
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+} 
+
+.body1.portfol-hovered{
+  visibility: visible;
+}
+
+.body2.niche-hovered{
+  visibility: visible;
+}
+
+.body3.django-hovered{
+  visibility: visible;
+}
+
+.body4.gui-hovered{
+  visibility: visible;
 }
 
 .git1:hover{
@@ -81,6 +252,10 @@
   border: none;
   height: 2px;
   background-color: #000; 
+}
+
+.accord{
+  padding-left: 40px;
 }
 
 .steam-engine {
@@ -100,4 +275,49 @@
   100% {
     transform: translateX(750%); 
   }
+}
+
+
+@media (max-width: 680px){
+
+  .navmenu{
+    display:none;
+  }
+
+  .bio{
+    padding: 30px;
+    padding-right: 0px;
+  }
+
+  .about, .coursework{
+    height: 140vh; 
+  }
+
+  nav a.active {
+    text-shadow:0 2px 2px rgba(128, 128, 128, 0.74);
+    transform: translate(1px, -1px);
+  }
+
+  .mobile-projects{
+    display: block;
+  }
+
+  .projects{
+    display: none;
+  }
+
+  .wordle-image, .phone-image {
+    height: auto;
+    width: auto;
+  }
+
+  .accord{
+    padding-left: 20px;
+  }
+
+  .download{
+    display: block;
+  }
+
+
 }

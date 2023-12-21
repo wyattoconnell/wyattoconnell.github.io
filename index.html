@@ -15,369 +15,566 @@
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
             <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Prata&family=Yeseva+One&display=swap" rel="stylesheet">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Nunito+Sans&family=Outfit:wght@300&display=swap" rel="stylesheet">
         <!--<link rel="stylesheet" href="style.css">-->
         <!--scss-->
             <link rel="stylesheet" href="style.css">
         <!--css-->
             <link rel="stylesheet" href="tweaks.css">
     
-        <title>Wyatt's Personal Website</title>
+        <title>Wyatt's Portfolio</title>
     </head>
     <body>
-        <!--NAVBAR-->
-        <nav class="navbar navbar-expand-md navbar-light sticky-top" style="background-color: rgb(29, 52, 1, 0.4);">
-            <div class="container">
-                    <a href="#" class="navbar-brand" >
-                        <img class="pb-2" src="resources/favpng_clip-art-log-cabin-vector-graphics-image.png" alt="" width="27" height="32" >
-                    </a>
-    
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="color:black">
-                        <i class="bi bi-list text-black" style="opacity:1;"></i>
-                      </button>
-                    
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ms-auto">
-                            <li class="nav-item icon-link">
-                                <a href="#projects" class="nav-link text-black" style="font-family: 'Yeseva One', cursive; opacity:1;">
-                                    projects
-                                </a>
-                            </li>
-                            <li class="nav-item icon-link">
-                                <a href="https://www.linkedin.com/in/wyatt-o-connell-299185240/" class="nav-link">
-                                    <i class="linkd bi bi-linkedin text-black" style="opacity:1;"></i>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="https://github.com/wyattoconnell" class="nav-link">
-                                    <i class="bi bi-github text-black" style="opacity:1;"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-            </div>
-        </nav>
     
         <!--TOP PANEL-->
-        <section class="topPanel p-4 ps-5 pt-5 bg-light">
-            <div class="name">
-                <div class="wyatt">
-                    <h1 class="display-1 text-dark">
-                        wyatt
-                        </h1>
-                </div>
-                <div class="oconnell">
-                    <h1 class="display-1 text-dark">
-                        o’connell 
-                        </h1>
-                </div>
-            </div>
-        </section>
-    
-        <!--Bio-->
-        <section class="bg-light" style="font-family: 'Nunito Sans', sans-serif;">
-            <div class="d-sm-flex flex-row text-black">
-                <div class="col p-5 pt-4">
-                    <img src="resources/MyProject.png" class="me-image p-2 pe-3" alt="image not found">
-                    <div class="about">
-                        <b style="font-size: 17px;">Hi, I’m Wyatt:</b> an out-of-the-box, proactive problem-solver with a passion and aptitude for the creative aspects of programming. I’m looking for an opportunity to learn, set goals, accomplish them, and apply my skills to a concrete product to be shared with the world. I’m most comfortable with Java, Python, HTML, and CSS, but I’m constantly learning new skills and refining old ones. Please feel free to reach out and start a conversation! Outside of programming, I like to mountain bike, play tennis, and my favorite thing in the world is a good swimming hole. 
-                    </div>
-                </div>
-                <div class="col p-4">
-                    <dl class="row">
-                        <dt class="col-md-4">Education:</dt>
-                        <dt class="col-md-8">
-                            <figure>
-                                <p>The Thacher School CdeP '21</p>
-                                <p>University of Virginia '25</p>
-                                <figcaption class="blockquote-footer">
-                                    <small>Computer Science Major, Technology Entrepreneurship Minor</small>
-                                </figcaption>
-                            </figure>
-                        </dt>
-                        <dt class="col-md-4">Hometown:</dt>
-                        <dd class="col-md-8">
-                          <p>San Anselmo, CA</p>
-                        </dd>
-                        <dt class="col-md-12">
-                            <div class="pt-2">
-                                <a href="resources/Oconnell-FinalResume.docx.pdf" class="text-decoration-none">
-                                    <button class="download text-light"type="button">Download Full Resume</button>
-                                </a> 
+        <section class="topPanel bg-light">
+            <div style="display: flex;">
+                <div class="everything">
+                    
+                    <!--Name-->
+                    <section class="about" id="about">
+                        <div class="name p-5 pe-0 pt-4 pb-0" id="name">
+                            <div class="wyatt">
+                                <h1 class="display-1 text-dark">wyatt</h1>
                             </div>
-                        </dt>
-                    </dl>
+                            <div class="oconnell">
+                                <h1 class="display-1 text-dark">o’connell</h1>
+                            </div>
+                        </div>
+                        <!--blurb-->
+                        <div class="bio d-sm-flex text-black">
+                            <div>
+                                <img src="resources/MyProject.png" class="me-image p-2 pe-3" alt="image not found">
+                                <div style="opacity: 0.6; font-size: 19px;">
+                                    <b style="font-size: 22px;">Hi, I’m Wyatt:</b> an out-of-the-box, proactive problem-solver with a passion and aptitude for the creative aspects of programming. I’m looking for an opportunity to learn, set goals, accomplish them, and apply my skills to a meaningful product. I’m most comfortable with Java, Python, HTML, and CSS, but I’m constantly learning new skills and refining old ones. Please feel free to reach out and start a conversation! Outside of programming, I like to mountain bike, play tennis, and my favorite thing in the world is a good swimming hole. 
+                                </div>
+                            </div>
+                            <div class="education text-dark" style="opacity: 0.7; font-size: 22px; display: flex; padding-top: 5vh;">
+                                <div style="display: flex; flex-direction: column; font-size: 22px">
+                                    <b>The Thacher School CdeP '21</b>
+                                    <b>University of Virginia '25 - <i>Computer Science, Technology Entrepreneurship</i></b>
+                                </div>
+                            </div>
+                            <a href="resources/resume-dec2023.docx.pdf" class="text-decoration-none pt-4">
+                                <button class="download text-light"type="button">Download Full Resume</button>
+                            </a> 
+                            
+                        </div>
+                    </section>
+                    <!--coursework-->
+                    <section class="coursework" id="coursework">
+                        <div class="container ps-5">
+                            <h2 class="pb-4 text-dark" style="font-family: 'Yeseva One', cursive; opacity: 0.7; padding-top: 50px;">
+                                relevant coursework
+                            </h2>
+                        </div>
+                        <div class="accord pe-2 accordion accordion-flush" style="padding-bottom: 200px; font-family: 'Josefin Sans', sans-serif; opacity: 0.6; font-size: 18px;">
+                            <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-light text-black" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne" style="font-size: 20px;">
+                                Data Structures and Algorithms I & II
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse bg-light text-black" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <div class="d-sm-flex flex-row text-black">
+                                        <ul> 
+                                            <h5>Key Concepts </h5>
+                                            <li>Data Structures</li>
+                                            <li>Algorithms</li>
+                                            <li>Program Analysis</li>
+                                        </ul> 
+                                        <ul>
+                                            <h5>Tools </h5>
+                                            <li>Java</li>
+                                            <li>Eclipse</li>
+                                        </ul> 
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingTwo" style="font-size: 20px;">
+                                <button class="accordion-button collapsed bg-light text-black" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo" style="font-size: 20px;">
+                                Intro to Data Science with Python
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body bg-light text-black">
+                                    <div class="d-sm-flex flex-row text-black">
+                                        <ul> 
+                                            <h5>Key Concepts </h5>
+                                            <li>Various Modeling Techniques</li>
+                                            <li>Data Analysis</li>
+                                        </ul> 
+                                        <ul>
+                                            <h5>Tools </h5>
+                                            <li>Python</li>
+                                            <li>Jupyter Notebook</li>
+                                        </ul> 
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingThree" style="font-size: 20px;">
+                                <button class="accordion-button collapsed bg-light text-black" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree" style="font-size: 20px;">
+                                Computer Systems and Organization I
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body bg-light text-black">
+                                    <div class="d-sm-flex flex-row text-black">
+                                        <ul> 
+                                            <h5>Key Concepts </h5>
+                                            <li>Understanding how C becomes assembly</li>
+                                            <li>Understanding how assembly is run by a computer</li>
+                                            <li>How data is stored</li>
+                                        </ul> 
+                                        <ul>
+                                            <h5>Tools </h5>
+                                            <li>C</li>
+                                            <li>Vim</li>
+                                            <li>Git</li>
+                                        </ul> 
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingFour" style="font-size: 20px;">
+                                <button class="accordion-button collapsed bg-light text-black" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour" style="font-size: 20px;">
+                                Discrete Math and Theory I
+                                </button>
+                                </h2>
+                                <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body bg-light text-black">
+                                    <div class="d-sm-flex flex-row text-black">
+                                        <ul> 
+                                            <h5>Key Concepts </h5>
+                                            <li>Crafting proofs of predicate and propositional logic</li>
+                                        </ul> 
+                                        <ul>
+                                            <h5>Tools </h5>
+                                            <li>Lean</li>
+                                            <li>VSCode</li>
+                                            <li>Git</li>
+                                        </ul> 
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingFive" style="font-size: 20px;">
+                                <button class="accordion-button collapsed bg-light text-black" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive" style="font-size: 20px;">
+                                Software Development Essentials
+                                </button>
+                                </h2>
+                                <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body bg-light text-black">
+                                    <div class="d-sm-flex flex-row text-black">
+                                        <ul> 
+                                            <h5>Key Concepts </h5>
+                                            <li>Designing functional and object oriented systems</li>
+                                            <li>Front-end software and Graphical user interphases</li>
+                                            <li>Back-end software and database design</li>
+                                        </ul> 
+                                        <ul>
+                                            <h5>Tools </h5>
+                                            <li>Java</li>
+                                            <li>IntelliJ</li>
+                                            <li>Git</li>
+                                            <li>JavaFX</li>
+                                        </ul> 
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingSix" style="font-size: 20px;">
+                                <button class="accordion-button collapsed bg-light text-black" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix" style="font-size: 20px;">
+                                Intro to Cybersecurity
+                                </button>
+                                </h2>
+                                <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body bg-light text-black">
+                                    <div class="d-sm-flex flex-row text-black">
+                                        <ul> 
+                                            <h5>Key Concepts </h5>
+                                            <li>Basics of advanced topics in cybersecurity including encryption, digital forensics, binary exploits, and networks</li>
+                                            <li>Ethical and political context and motivation for cybersecurity in today's society</li>
+                                            <li>Modern concepts in cybersecurity attacks and prevention</li>
+                                        </ul> 
+                                        <ul>
+                                            <h5>Tools </h5>
+                                            <li>C</li>
+                                            <li>SQL</li>
+                                            <li>Assembly</li>
+                                            <li>Java</li>
+                                        </ul> 
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-heading7">
+                                <button class="accordion-button collapsed bg-light text-black" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse7" aria-expanded="false" aria-controls="flush-collapse7" style="font-size: 20px;">
+                                Advanced Software Development
+                                </button>
+                                </h2>
+                                <div id="flush-collapse7" class="accordion-collapse collapse" aria-labelledby="flush-heading7" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body bg-light text-black">
+                                    <div class="d-sm-flex flex-row text-black">
+                                        <ul> 
+                                            <h5>Key Concepts </h5>
+                                            <li>Implementing a large software system in teams using a modified Scrum methodology</li>
+                                            <li>Navigating ethical and professional issues such as diversity issues, how to handle data responsibly, and software licensing</li>
+                                            <li>Working with the Google Accounts and Google Maps API</li>
+                                        </ul> 
+                                        <ul>
+                                            <h5>Tools </h5>
+                                            <li>Python</li>
+                                            <li>Django</li>
+                                            <li>Git</li>
+                                            <li>CSS</li>
+                                            <li>HTML</li>
+                                            <li>Heroku</li>
+                                        </ul> 
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!--Projects-->
+                        <section class="mobile-projects bg-light text-black p-4">
+                            <div class="container">
+                                <h2 class="pt-2 pb-3 text-dark" style="font-family: 'Yeseva One', cursive; opacity: 0.7;">
+                                projects
+                                </h2>
+                            </div>
+                            <div class="d-sm-flex flex-row text-black" style="font-family: 'Josefin Sans', sans-serif;">
+                                <div class="col">
+                                <div class="py-4">
+                                    <div class="card" style="background-color: rgba(1, 52, 24, 0.7); width: 100%;">
+                                        <div class="card-body">
+                                        <h5 class="text-light">Personal Website</h5>
+                                        <p class="text-light">Built from scratch with CSS, HTML, and Bootstrap 5.3.</p>
+                                        <div>   
+                                            <a href="https://github.com/wyattoconnell/wyattoconnell.github.io">
+                                                <i class="git1 bi bi-github text-light p-3" style="font-size: 25px;"> </i>
+                                            </a>
+                                            </div>
+                                        </div>  
+                                    </div>
+                                </div>
+                                <div class="py-4">
+                                    <div class="card" style="background-color: rgba(1, 52, 24, 0.7);">
+                                        <div class="card-body text-light">
+                                        <h5>The Niche Index</h5>
+                                        <img src="resources/compTopIMG.png" class="comp-image p-2 pe-3 img-fluid" alt="image not found">
+                                        <img src="resources/phoneBottomIMG.png" class="phone-image p-2 pe-3 img-fluid" alt="image not found">
+                                        <p>A web application that uses the spotify API to display the obscurity of a user's top songs, artists, and saved tracks, and calculates an overall "Niche Score" that reflects the obscurity of the user's entire music library.</p>
+                                        <div>    
+                                            <a href="https://github.com/wyattoconnell/NicheIndex">
+                                                <i class="git2 bi bi-github text-light p-3" style="font-size: 25px;"> </i>
+                                            </a>
+                                            </div>
+                                        </div>  
+                                    </div>
+                                </div>
+                                <div class="py-4">
+                                    <div class="card" style="background-color: rgba(1, 52, 24, 0.7);">
+                                        <div class="card-body text-light">
+                                        <h5>Lost and Found Web App</h5>
+                                        <img src="resources/lost-and-found-home.png" class="home-image p-2 pe-3 img-fluid" alt="image not found">
+                                        <img src="resources/lost-and-found-submit.png" class="submit-image p-2 pe-3 img-fluid" alt="image not found">
+                                        <p>A small team and I utilized scrum methodology to create this Django web app. This virtual lost and found integrates the Google OAuth and Maps API to facilitate a simple and effective user experience.</p>
+                                        <div>    
+                                            <a href="https://github.com/wyattoconnell/lost-and-found">
+                                                <i class="git2 bi bi-github text-light p-3" style="font-size: 25px;"> </i>
+                                            </a>
+                                            </div>
+                                        </div>  
+                                    </div>
+                                </div>
+                                <div class="py-4">
+                                    <div class="card" style="background-color: rgba(1, 52, 24, 0.7);">
+                                        <div class="card-body text-light">
+                                        <h5 >Wordle GUI</h5>
+                                        <img src="resources/wordle-ss.png" class="wordle-image p-2 pe-3 img-fluid" alt="image not found">
+                                        <p>A remake of the popular game Wordle I made with a couple friends. The user must guess a random 5 letter word pulled from a dictionary.txt file. We used Java and JavaFX.</p>
+                                        <div>    
+                                            <a href="https://github.com/wyattoconnell/wordle">
+                                                <i class="git2 bi bi-github text-light p-3" style="font-size: 25px;"> </i>
+                                            </a>
+                                            </div>
+                                        </div>  
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </section>
+                    
+                    <section id="projects" style="height: 100vh;" class="projects">
+                        <div class="container">
+                            <h2 class="pb-3 ps-5 text-dark" style="font-family: 'Yeseva One', cursive; opacity: 0.7; padding-top: 50px;">
+                            projects
+                            </h2>
+                        </div>
+                        <div class="d-sm-flex text-black pe-3 ps-5" style="font-family: 'Josefin Sans', sans-serif;">
+
+                            <div class="comic">
+                                <div class="portfol card" id="portfol" style="background-color: rgba(1, 52, 24, 0.7);">
+                                    <div class="card-body">
+                                    <div style="display: flex">
+                                        <h5 class="text-light pt-1" >Personal Website</h5>
+                                        <a href="https://github.com/wyattoconnell/wyattoconnell.github.io">
+                                        <i class="git1 bi bi-github text-light ps-3" style="font-size: 25px;"> </i>
+                                        </a>
+                                    </div>
+                                    <p class="p1 text-light"><i>Built from scratch with CSS, HTML, Javascript, and Bootstrap 5.3.</i></p>
+                                    </div> 
+                                    <div class="body1 p-3 pt-0 text-light" id="body1">
+                                        <p>This project was one of my first experiences with HTML and CSS. While developing, I played around with various typographies, color schemes, and site layouts; I really enjoyed the freedom to style the site however I liked. The final product is a result of copious experimentation and exploration. Throughout this process, I learned that I am most passionate about a project when I have room to inject my own creativity.</p>
+                                    </div>
+                                </div>
+                                            
+                                <div class="niche card" id="niche" style="background-color: rgba(1, 52, 24, 0.7);">
+                                    <div class="card-body text-light">
+                                        <div style="display: flex">
+                                            <h5 class="text-light pt-1" >The Niche Index</h5>
+                                            <a href="https://github.com/wyattoconnell/NicheIndex">
+                                            <i class="git1 bi bi-github text-light ps-3" style="font-size: 25px;"> </i>
+                                            </a>
+                                        </div>
+                                        <p class="p2 text-light"><i>A web application that uses the Spotify API to display the obscurity of a user's taste. Implemented with React, JS, HTML, CSS, and Node.js.</i></p> 
+                                        <div class="body2" id="body2">
+                                            <p>Users are given an overall “Niche Score” to represent how niche their library is. The score is produced by an algorithm I devised that leverages song virality and artist popularity. My goal with this project was to create an application that myself and my peers would actually find useful. This idea was completely original and therefore required a lot of experimentation with the UI/UX. I gained many valuable skills throughout the process: replicating Spotify’s pre-established design language, teaching myself how to navigate React and Node.js, making API calls, and scaling for mobile.</p>
+                                            <img src="resources/compTopIMG.png" class="comp-image p-2 pe-3 img-fluid" alt="image not found">
+                                            <img src="resources/phoneBottomIMG.png" class="phone-image p-2 pe-3 img-fluid" alt="image not found">
+                                        </div> 
+                                    </div>
+                                </div>
+    
+                                <div class="django card" id="django" style="background-color: rgba(1, 52, 24, 0.7);">
+                                    <div class="card-body text-light">
+                                    <div style="display: flex;">
+                                        <h5 class="card-title pt-1">Lost and Found Web App</h5>
+                                        <a href="https://github.com/wyattoconnell/lost-and-found">
+                                            <i class="git2 bi bi-github text-light p-3" style="font-size: 25px;"> </i>
+                                        </a>
+                                    </div>
+                                    <p class="p3 text-light"><i>A small team and I utilized scrum methodology to create this Django web app. This virtual lost and found integrates the Google OAuth and Maps API to facilitate a simple and effective user experience.</i></p> 
+                                    <div class="body3 text-light" id="body3">
+                                        <p>Throughout development, we simulated a real-world, agile work environment. My group and I gained experience in communicating software design, continuous integration, devops, beta testing, and maintenance. I enjoyed working with a team and learning how to effectively distribute tasks. </p>
+                                        <img src="resources/lost-and-found-home.png" class="home-image p-2 pe-3 img-fluid" alt="image not found">
+                                        <img src="resources/lost-and-found-submit.png" class="submit-image p-2 pe-3 img-fluid" alt="image not found">
+                                    </div>
+                                    </div>
+                                </div>
+    
+                                <div class="gui card" id="gui" style="background-color: rgba(1, 52, 24, 0.7);">
+                                    <div class="card-body text-light">
+                                    <div style="display: flex;">
+                                        <h5 class="card-title pt-1">Wordle GUI</h5>
+                                        <a href="https://github.com/wyattoconnell/wordle">
+                                            <i class="git2 bi bi-github text-light p-3" style="font-size: 25px;"> </i>
+                                        </a>
+                                    </div>
+                                    <p class="p4 text-light"><i>A remake of the popular game Wordle I made with a couple friends. The user must guess a random 5 letter word pulled from a dictionary.txt file. We used Java and JavaFX.</i></p>
+                                    </div>  
+                                    <div class="body4 text-light p-3 pt-0" id="body4">
+                                        <p>I really enjoy designing systems for object-oriented languages; it’s easier to keep my code DRY and elegant. This project provided good practice for managing modularity and polymorphism. </p>
+                                        <img src="resources/wordle-ss.png" class="wordle-image p-2 pe-3 img-fluid" alt="image not found">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+
                 </div>
+                <nav class="navmenu d-sm-flex text-dark p-5 ps-0" style="font-family: 'Yeseva One', cursive; text-align: right; opacity: 0.7;">
+                    <ul class="menu" style="list-style: none">
+                        <li><a href="#about" class="nav-link"><h2 class="display-4">about</h2></a></li>
+                        <li><a href="#coursework" class="nav-link"><h2 class="display-4">coursework</h2></a></li>
+                        <li><a href="#projects" class="nav-link"><h2 class="display-4">projects</h2></a></li>
+                        <li><a href="resources/resume-dec2023.docx.pdf" target="_blank" class="nav-link"><h2 class="display-4">resume</h2></a></li>
+                        <li><a href="https://www.linkedin.com/in/wyatt-o-connell-299185240/" target="_blank" class="nav-link"><h2 class="display-4">linkedin</h2></a></li>
+                        <li><a href="https://github.com/wyattoconnell" target="_blank" class="nav-link"><h2 class="display-4">github</h2></a></li>
+                    </ul>
+                </nav>
             </div>
-        </section">
+            
+        </section>
 
         <!--Train-->
         <div class="pt-2">
             <div class="steam-engine fixed-bottom" style="opacity:0;"></div>
         </div>
 
-        <!--Relevant Courses-->
-        <section class="text-black p-4 bg-light" style="font-family: 'Nunito Sans', sans-serif">
-            <div class="container">
-                <h2 class="pt-2 pb-4 text-dark" style="font-family: 'Yeseva One', cursive; opacity: 0.5;">
-                relevant coursework
-                </h2>
-            </div>
-            <div class="accordion accordion-flush">
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-light text-black" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                    Data Structures and Algorithms I & II
-                    </button>
-                  </h2>
-                  <div id="flush-collapseOne" class="accordion-collapse collapse bg-light text-black" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">
-                        <div class="d-sm-flex flex-row text-black">
-                            <ul> 
-                                <h5>Key Concepts </h5>
-                                <li>Data Structures</li>
-                                <li>Algorithms</li>
-                                <li>Program Analysis</li>
-                            </ul> 
-                            <ul>
-                                <h5>Tools </h5>
-                                <li>Java</li>
-                                <li>Eclipse</li>
-                            </ul> 
-                        </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="flush-headingTwo">
-                    <button class="accordion-button collapsed bg-light text-black" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                    Intro to Data Science with Python
-                    </button>
-                  </h2>
-                  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body bg-light text-black">
-                        <div class="d-sm-flex flex-row text-black">
-                            <ul> 
-                                <h5>Key Concepts </h5>
-                                <li>Various Modeling Techniques</li>
-                                <li>Data Analysis</li>
-                            </ul> 
-                            <ul>
-                                <h5>Tools </h5>
-                                <li>Python</li>
-                                <li>Jupyter Notebook</li>
-                            </ul> 
-                        </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="flush-headingThree">
-                    <button class="accordion-button collapsed bg-light text-black" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                    Computer Systems and Organization I
-                    </button>
-                  </h2>
-                  <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body bg-light text-black">
-                        <div class="d-sm-flex flex-row text-black">
-                            <ul> 
-                                <h5>Key Concepts </h5>
-                                <li>Understanding how C becomes assembly</li>
-                                <li>Understanding how assembly is run by a computer</li>
-                                <li>How data is stored</li>
-                            </ul> 
-                            <ul>
-                                <h5>Tools </h5>
-                                <li>C</li>
-                                <li>Vim</li>
-                                <li>Git</li>
-                            </ul> 
-                        </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingFour">
-                      <button class="accordion-button collapsed bg-light text-black" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-                    Discrete Math and Theory I
-                      </button>
-                    </h2>
-                    <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-                      <div class="accordion-body bg-light text-black">
-                        <div class="d-sm-flex flex-row text-black">
-                            <ul> 
-                                <h5>Key Concepts </h5>
-                                <li>Crafting proofs of predicate and propositional logic</li>
-                            </ul> 
-                            <ul>
-                                <h5>Tools </h5>
-                                <li>Lean</li>
-                                <li>VSCode</li>
-                                <li>Git</li>
-                            </ul> 
-                        </div>
-                      </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingFive">
-                      <button class="accordion-button collapsed bg-light text-black" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
-                    Software Development Essentials
-                      </button>
-                    </h2>
-                    <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
-                      <div class="accordion-body bg-light text-black">
-                        <div class="d-sm-flex flex-row text-black">
-                            <ul> 
-                                <h5>Key Concepts </h5>
-                                <li>Designing functional and object oriented systems</li>
-                                <li>Front-end software and Graphical user interphases</li>
-                                <li>Back-end software and database design</li>
-                            </ul> 
-                            <ul>
-                                <h5>Tools </h5>
-                                <li>Java</li>
-                                <li>IntelliJ</li>
-                                <li>Git</li>
-                                <li>JavaFX</li>
-                            </ul> 
-                        </div>
-                      </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingSix">
-                      <button class="accordion-button collapsed bg-light text-black" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
-                    Intro to Cybersecurity
-                      </button>
-                    </h2>
-                    <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
-                      <div class="accordion-body bg-light text-black">
-                        <div class="d-sm-flex flex-row text-black">
-                            <ul> 
-                                <h5>Key Concepts </h5>
-                                <li>Basics of advanced topics in cybersecurity including encryption, digital forensics, binary exploits, and networks</li>
-                                <li>Ethical and political context and motivation for cybersecurity in today's society</li>
-                                <li>Modern concepts in cybersecurity attacks and prevention</li>
-                            </ul> 
-                            <ul>
-                                <h5>Tools </h5>
-                                <li>C</li>
-                                <li>SQL</li>
-                                <li>Assembly</li>
-                                <li>Java</li>
-                            </ul> 
-                        </div>
-                      </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-heading7">
-                      <button class="accordion-button collapsed bg-light text-black" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse7" aria-expanded="false" aria-controls="flush-collapse7">
-                    Advanced Software Development
-                      </button>
-                    </h2>
-                    <div id="flush-collapse7" class="accordion-collapse collapse" aria-labelledby="flush-heading7" data-bs-parent="#accordionFlushExample">
-                      <div class="accordion-body bg-light text-black">
-                        <div class="d-sm-flex flex-row text-black">
-                            <ul> 
-                                <h5>Key Concepts </h5>
-                                <li>Implementing a large software system in teams using a modified Scrum methodology</li>
-                                <li>Navigating ethical and professional issues such as diversity issues, how to handle data responsibly, and software licensing</li>
-                                <li>Working with the Google Accounts and Google Maps API</li>
-                            </ul> 
-                            <ul>
-                                <h5>Tools </h5>
-                                <li>Python</li>
-                                <li>Django</li>
-                                <li>Git</li>
-                                <li>CSS</li>
-                                <li>HTML</li>
-                                <li>Heroku</li>
-                            </ul> 
-                        </div>
-                      </div>
-                    </div>
-                </div>
-              </div>
-        </section>
-    
-        <!--Projects-->
-        <section id="projects" class="bg-white text-black">
-            <section class="bg-light text-black p-4">
-                <div class="container">
-                    <h2 class="pt-2 pb-3 text-dark" style="font-family: 'Yeseva One', cursive; opacity: 0.5;">
-                    projects
-                    </h2>
-                </div>
-                <div class="d-sm-flex flex-row text-black">
-                    <div class="col">
-                    <div class="py-4">
-                        <div class="card" style="background-color: rgba(1, 52, 24, 0.4);">
-                            <div class="card-body">
-                            <h5 class="card-title text-light">Personal Website</h5>
-                            <p class="card-text text-light">Built from scratch with CSS, HTML, and Bootstrap 5.3.</p>
-                            <div>   
-                                <a href="https://github.com/wyattoconnell/wyattoconnell.github.io">
-                                    <i class="git1 bi bi-github text-light p-3" style="font-size: 25px;"> </i>
-                                </a>
-                                </div>
-                            </div>  
-                        </div>
-                    </div>
-                    <div class="py-4">
-                        <div class="card" style="background-color: rgba(1, 52, 24, 0.4);">
-                            <div class="card-body text-light">
-                            <h5 class="card-title">The Niche Index</h5>
-                            <img src="resources/compTopIMG.png" class="comp-image p-2 pe-3 img-fluid" alt="image not found">
-                            <img src="resources/phoneBottomIMG.png" class="phone-image p-2 pe-3 img-fluid" alt="image not found">
-                            <p class="card-text">A web application that uses the spotify API to display the obscurity of a user's top songs, artists, and saved tracks, and calculates an overall "Niche Score" that reflects the obscurity of the user's entire music library.</p>
-                            <div>    
-                                <a href="https://github.com/wyattoconnell/NicheIndex">
-                                    <i class="git2 bi bi-github text-light p-3" style="font-size: 25px;"> </i>
-                                </a>
-                                </div>
-                            </div>  
-                        </div>
-                    </div>
-                    <div class="py-4">
-                        <div class="card" style="background-color: rgba(1, 52, 24, 0.4);">
-                            <div class="card-body text-light">
-                            <h5 class="card-title">Lost and Found Web App</h5>
-                            <img src="resources/lost-and-found-home.png" class="home-image p-2 pe-3 img-fluid" alt="image not found">
-                            <img src="resources/lost-and-found-submit.png" class="submit-image p-2 pe-3 img-fluid" alt="image not found">
-                            <p class="card-text">A small team and I utilized scrum methodology to create this Django web app. This virtual lost and found integrates the Google OAuth and Maps API to facilitate a simple and effective user experience.</p>
-                            <div>    
-                                <a href="https://github.com/wyattoconnell/lost-and-found">
-                                    <i class="git2 bi bi-github text-light p-3" style="font-size: 25px;"> </i>
-                                </a>
-                                </div>
-                            </div>  
-                        </div>
-                    </div>
-                    <div class="py-4">
-                        <div class="card" style="background-color: rgba(1, 52, 24, 0.4);">
-                            <div class="card-body text-light">
-                            <h5 class="card-title">Wordle GUI</h5>
-                            <img src="resources/wordle-ss.png" class="wordle-image p-2 pe-3 img-fluid" alt="image not found">
-                            <p class="card-text">A remake of the popular game Wordle I made with a couple friends. The user must guess a random 5 letter word pulled from a dictionary.txt file. We used Java and JavaFX.</p>
-                            <div>    
-                                <a href="https://github.com/wyattoconnell/wordle">
-                                    <i class="git2 bi bi-github text-light p-3" style="font-size: 25px;"> </i>
-                                </a>
-                                </div>
-                            </div>  
-                        </div>
-                    </div>
-                    </div>
-                </div>
-        </section>
-    
-        <footer class="text-center text-dark bg-light">
-            by Wyatt O'Connell
-        </footer>
     
     
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+        <script>
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+              anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+        
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+        
+                if (targetElement) {
+                  targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                  });
+                }
+              });
+            });
+
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+
+            const options = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.3 
+                };
+
+                const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                    const currentId = entry.target.getAttribute('id');
+                    navLinks.forEach(link => {
+                        if (link.getAttribute('href').includes(currentId)) {
+                        link.classList.add('active');
+                        } else {
+                        link.classList.remove('active');
+                        }
+                    });
+                    }
+                });
+                }, options);
+
+                sections.forEach(section => {
+                observer.observe(section);
+                });
+
+                const gui = document.getElementById('gui');
+                const niche = document.getElementById('niche');
+                const portfol = document.getElementById('portfol');
+                const django = document.getElementById('django');
+                const body1 = document.getElementById('body1');
+                const body2 = document.getElementById('body2');
+                const body3 = document.getElementById('body3');
+                const body4 = document.getElementById('body4');
+            
+
+                function pxToVw(pxValue) {
+                    const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+                    const vwValue = (pxValue / vw) * 100;
+                    
+                    return vwValue;
+                }
+
+
+                function guiMouseEnter() {
+                const djangoX = django.getBoundingClientRect().left;
+                const portfolX = portfol.getBoundingClientRect().left;
+                const jump = djangoX-portfolX;
+
+                gui.classList.add('gui-hovered');
+                body4.classList.add('gui-hovered');
+                gui.style.transform = 'translate(0px, -30vh)';
+                niche.style.transform = 'translate(0px, -30vh)';
+                portfol.style.transform = `translateX(${jump}px)`;
+                }
+
+                function guiMouseLeave() {
+                gui.classList.remove('gui-hovered');
+                body4.classList.remove('gui-hovered');
+                gui.style.transform = 'none';
+                niche.style.transform = 'none';
+                portfol.style.transform = 'none';
+                gui.scrollTop = 0;
+                }
+
+                function nicheMouseEnter() {
+
+                const djangoX = django.getBoundingClientRect().left;
+                const portfolX = portfol.getBoundingClientRect().left;
+                const jump = djangoX-portfolX;
+
+                var jumpVW = pxToVw(jump);
+                jumpVW = -1*(jumpVW + 30);
+
+                niche.classList.add('niche-hovered');
+                body2.classList.add('niche-hovered');
+                niche.style.transform = 'translate(-30vw, 0)';
+                gui.style.transform = 'translate(0px, 55vh)';
+                portfol.style.transform = 'translate(-30vw, 0px)';
+                django.style.transform = `translateX(${jumpVW}vw)`;
+                }
+
+                function nicheMouseLeave() {
+                niche.classList.remove('niche-hovered');
+                body2.classList.remove('niche-hovered');
+                niche.style.transform = 'none';
+                gui.style.transform = 'none';
+                portfol.style.transform = 'none';
+                django.style.transform = 'none';
+                niche.scrollTop = 0;
+                }
+
+                function djangoMouseEnter() {
+                django.classList.add('django-hovered');
+                body3.classList.add('django-hovered');
+                django.style.transform = 'translate(0vw, -30vh)';
+                gui.style.transform = 'translate(30vw, -30vh)';
+                portfol.style.transform = 'translate(10vw, -30vh)';
+                niche.style.transform = 'translate(10vw, -30vh)';
+                }
+
+                function djangoMouseLeave() {
+                django.classList.remove('django-hovered');
+                body3.classList.remove('django-hovered');
+                django.style.transform = 'none';
+                gui.style.transform = 'none';
+                portfol.style.transform = 'none';
+                niche.style.transform = 'none';
+                django.scrollTop = 0;
+                }
+
+                function portfolMouseEnter() {
+                portfol.classList.add('portfol-hovered');
+                body1.classList.add('portfol-hovered');
+                niche.style.transform = 'translate(13vw, 0px)';
+                gui.style.transform = 'translateY(17vh)';
+                django.style.transform = 'translateY(17vh)';
+                }
+
+                function portfolMouseLeave() {
+                portfol.classList.remove('portfol-hovered');
+                body1.classList.remove('portfol-hovered');
+                niche.style.transform = 'none';
+                gui.style.transform = 'none';
+                django.style.transform = 'none';
+                portfol.scrollTop = 0;
+                }
+
+                gui.addEventListener('click', guiMouseEnter);
+                gui.addEventListener('mouseleave', guiMouseLeave);
+                niche.addEventListener('click', nicheMouseEnter);
+                niche.addEventListener('mouseleave', nicheMouseLeave);
+                django.addEventListener('click', djangoMouseEnter);
+                django.addEventListener('mouseleave', djangoMouseLeave);
+                portfol.addEventListener('click', portfolMouseEnter);
+                portfol.addEventListener('mouseleave', portfolMouseLeave);
+            
+          </script>
         
     </body>
 </html>
