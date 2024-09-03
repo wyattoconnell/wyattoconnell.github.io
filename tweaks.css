@@ -1,6 +1,9 @@
+
+
 .root{
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
 }
+
 
 .navbar{
   display: none;
@@ -88,8 +91,9 @@ nav a.active {
   flex-direction: column;
   width: 90%;
   padding: 50px;
+  padding-top: 20px;
   padding-right: 0px;
-  font-family: 'Josefin Sans', sans-serif; 
+  font-family: "Work Sans", sans-serif;
 }
 
 .download{
@@ -266,6 +270,40 @@ nav a.active {
   background-size: fill;
   animation: steamEngineAnim 30s linear infinite; 
   transform: scaleX(-1); 
+}
+
+
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel {
+  display: flex;
+  white-space: nowrap;
+}
+
+.carousel:hover .first-half{
+  animation-play-state: paused;
+}
+
+
+.first-half {
+  animation: scroll 35s linear infinite;
+}
+
+.carousel div {
+    padding: 5px;
+    text-align: center;
+    box-sizing: border-box;
+    font-family: "Work Sans", sans-serif;
+    font-size: x-large;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
 }
 
 @keyframes steamEngineAnim {
