@@ -25,7 +25,7 @@
 }
 
 .about, .coursework{
-  height: 150vh; 
+  height: 100vh; 
   overflow: auto;
 }
 
@@ -328,7 +328,7 @@ nav a.active {
   }
 
   .about, .coursework{
-    height: 140vh; 
+    height: 110vh; 
   }
 
   nav a.active {
