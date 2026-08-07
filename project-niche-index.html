@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Work+Sans:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="main.css" />
+    <title>The Niche Index · Wyatt O'Connell</title>
+  </head>
+  <body>
+    <header class="detail-header">
+      <div class="container detail-header-inner">
+        <a class="topnav-brand" href="index.html">wyatt o'connell</a>
+        <a class="back-link" href="index.html#projects">← Back to projects</a>
+      </div>
+    </header>
+
+    <main class="container md-page">
+      <article id="md-content" class="md-content"></article>
+    </main>
+
+    <script type="text/markdown" id="md-source">
+# The Niche Index
+
+*React · Node.js · Spotify API — 2024*
+
+Edit the markdown block in `project-niche-index.html` to add more detail,
+screenshots, or write-up.
+
+## Overview
+
+The Niche Index calculates an "obscurity score" for a user's music
+library by combining track virality and artist popularity. I designed the
+scoring model and built the UI to mirror Spotify's design language.
+
+## Details
+
+Add more here: how the scoring algorithm works, UI decisions, what you'd
+change with more time.
+
+![Niche Index desktop interface](resources/compTopIMG.png)
+![Niche Index mobile interface](resources/phoneBottomIMG.png)
+
+> New changes to Spotify's developer platform placed third-party apps
+> like this into "development mode," which limits access — so the live
+> deployment is currently down. Code is still up on GitHub.
+
+## Links
+
+- [GitHub repo](https://github.com/wyattoconnell/NicheIndex)
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+      const src = document.getElementById('md-source').textContent;
+      document.getElementById('md-content').innerHTML = marked.parse(src);
+    </script>
+  </body>
+</html>

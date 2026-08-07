@@ -1,449 +1,292 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-        
-        <!--icons-->
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-        <!--fonts-->
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
-            <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Prata&family=Yeseva+One&display=swap" rel="stylesheet">
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Nunito+Sans&family=Outfit:wght@300&display=swap" rel="stylesheet">
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <!--<link rel="stylesheet" href="style.css">-->
-        <!--scss-->
-            <link rel="stylesheet" href="style.css">
-        <!--css-->
-            <link rel="stylesheet" href="tweaks.css">
-    
-        <title>Wyatt's Portfolio</title>
-    </head>
-    <body>
-    
-        <!--TOP PANEL-->
-        <section class="topPanel bg-light">
-            <div style="display: flex;">
-                <div class="everything">
-                    
-                    <!--Name-->
-                    <section class="about" id="about">
-                        <div class="name p-5 pe-0 pt-4 pb-0" id="name">
-                            <div class="wyatt">
-                                <h1 class="display-1 text-dark">wyatt</h1>
-                            </div>
-                            <div class="oconnell">
-                                <h1 class="display-1 text-dark">o’connell</h1>
-                            </div>
-                        </div>
-                        <div class="p-5 pb-0 education text-dark" style="font-family: 'Yeseva One', cursive; opacity: 0.7; font-size: 22px; display: flex; padding-top: 5vh;">
-                            <div style="display: flex; flex-direction: column; font-size: 22px">
-                                <b>University of Virginia '25 - <i>Computer Science, Technology Entrepreneurship</i></b>
-                            </div>
-                        </div>
-                        <!--blurb-->
-                        <div class="bio d-sm-flex text-black">
-                            <div>
-                                <img src="resources/MyProject.png" class="me-image p-2 pe-3" alt="image not found">
-                                <div style="font-size: 19px;">
-                                    Hi, I’m Wyatt: a passionate developer with extensive experience in software engineering and a strong eagerness to learn. Through personal projects, academic endeavors, and internships, I’ve significantly contributed to various aspects of development, including system design, full-stack development, testing, and DevOps. I thrive in collaborative environments and am driven by the opportunity to express creativity in my work, as is evident in my personal projects. I’m seeking to join a dedicated team where I can make a meaningful impact. In my free time, I like to play board games, basketball, and ride my mountain bike.
-                                </div>
-                            </div>
-                            <a href="resources/OconnellResume2025.pdf" class="text-decoration-none pt-4">
-                                <button class="download text-light"type="button">Download Full Resume</button>
-                            </a> 
-                            
-                        </div>
-                    </section>
-                    <!--coursework-->
-                    <section class="coursework" id="coursework" style="margin-left: 3vw; margin-right: 3;">
-                        <div class="container">
-                            <h2 class="pb-2 text-dark" style="font-family: 'Yeseva One', cursive; opacity: 0.7; padding-top: 50px;">
-                                relevant coursework
-                            </h2>
-                        </div>
-  
-                        <div class="carousel-container">
-                            <div class="carousel">
-                                <div class="first-half">
-                                    Data Structures and Algo I & II, Discrete Math and Theory I & II, Computer Systems and Org I & II, Software Dev Essentials, Advanced Software Development, Intro to Cybersecurity, Internet Scale Applications, Programming Languages for Web Applications, Computer Game Design, New Product Development, Intro Data Science with Python, 
-                                </div>
-                                <div class="first-half">
-                                    Data Structures and Algo I & II, Discrete Math and Theory I & II, Computer Systems and Org I & II, Software Dev Essentials, Advanced Software Development, Intro to Cybersecurity, Internet Scale Applications, Programming Languages for Web Applications, Computer Game Design, New Product Development, Intro Data Science with Python, 
-                                </div>
-                            </div>
-                        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Work+Sans:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Wyatt O'Connell</title>
+  </head>
+  <body>
+    <svg style="display: none">
+      <symbol id="icon-github" viewBox="0 0 16 16">
+        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+      </symbol>
+      <symbol id="icon-linkedin" viewBox="0 0 16 16">
+        <path d="M13.5 0h-11A2.5 2.5 0 0 0 0 2.5v11A2.5 2.5 0 0 0 2.5 16h11a2.5 2.5 0 0 0 2.5-2.5v-11A2.5 2.5 0 0 0 13.5 0zM4.75 13.5h-2.2v-7h2.2v7zM3.65 5.5a1.28 1.28 0 1 1 0-2.55 1.28 1.28 0 0 1 0 2.55zM13.5 13.5h-2.2v-3.6c0-.86-.02-1.97-1.2-1.97-1.2 0-1.38.94-1.38 1.9v3.67h-2.2v-7h2.1v.96h.03c.3-.55 1.02-1.13 2.1-1.13 2.25 0 2.66 1.48 2.66 3.4v3.77z" />
+      </symbol>
+      <symbol id="icon-external" viewBox="0 0 16 16">
+        <path d="M10 1h5v5h-1.5V3.56L7.03 10.03 6 9l6.44-6.44H10V1z" />
+        <path d="M2.5 3A1.5 1.5 0 0 0 1 4.5v9A1.5 1.5 0 0 0 2.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9h-1.5v4.5h-9v-9H7V3H2.5z" />
+      </symbol>
+    </svg>
 
-                        <div class="container">
-                            <h3 class="pt-3 text-dark" style="font-family: 'Yeseva One', cursive; opacity: 0.7;">
-                                KBR, Software Development Intern
-                            </h3>
-                            <h6 style="font-family: 'Yeseva One', cursive; opacity: 0.5;">Chantilly, VA | May - August 2024</h6>
-                            <div style="font-size: 19px; font-family: 'Work Sans', sans-serif;">
-                                <ul style="list-style-type: square">
-                                    <li>Collaborated with a team to develop a digitally engineered space system testing workflow</li>
-                                    <li>Leveraged Kubernetes to orchestrate application containers and databases</li>
-                                    <li>Contributed to an Angular frontend application to intuitively display data using JavaScript libraries</li>
-                                    <li>Set up a MySQL database for querying testing data</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="container">
-                            <h3 class="pt-3 text-dark" style="font-family: 'Yeseva One', cursive; opacity: 0.7;">
-                                Scale AI, AI Trainer
-                            </h3>
-                            <h6 style="font-family: 'Yeseva One', cursive; opacity: 0.5;">Remote | December 2023 - Present</h6>
-                            <div style="font-size: 19px; font-family: 'Work Sans', sans-serif;">
-                                <ul style="list-style-type: square">
-                                    <li>Solved intricate programming problems and crafted responses to coding-related prompts for training large language models</li>
-                                    <li>Provided in-depth analysis of AI generated code</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </section>
-                    <!--Projects-->
-                        <section class="mobile-projects bg-light text-black p-4">
-                            <div class="container">
-                                <h2 class="pt-2 pb-3 text-dark" style="font-family: 'Yeseva One', cursive; opacity: 0.7;">
-                                recent projects
-                                </h2>
-                            </div>
-                            <div class="d-sm-flex flex-row text-black">
-                                <div class="col">
-                                <div class="py-4">
-                                    <div class="card" style="background-color: rgba(1, 52, 24, 0.7); width: 100%;">
-                                        <div class="card-body">
-                                        <h5 class="text-light">BestBet</h5>
-                                        <p class="text-light">A fictional sports betting application built with PHP, Postgres, and JavaScript.</p>
-                                        <div>   
-                                            <a href="https://github.com/wyattoconnell/bettingapp">
-                                                <i class="git1 bi bi-github text-light p-3" style="font-size: 25px;"> </i>
-                                            </a>
-                                            </div>
-                                        </div>  
-                                    </div>
-                                </div>
-                                <div class="py-4">
-                                    <div class="card" style="background-color: rgba(1, 52, 24, 0.7);">
-                                        <div class="card-body text-light">
-                                        <h5>The Niche Index</h5>
-                                        <img src="resources/compTopIMG.png" class="comp-image p-2 pe-3 img-fluid" alt="image not found">
-                                        <img src="resources/phoneBottomIMG.png" class="phone-image p-2 pe-3 img-fluid" alt="image not found">
-                                        <p>A web application that uses the spotify API to display the obscurity of a user's top songs, artists, and saved tracks, and calculates an overall "Niche Score" that reflects the obscurity of the user's entire music library.</p>
-                                        <div>    
-                                            <a href="https://github.com/wyattoconnell/NicheIndex">
-                                                <i class="git2 bi bi-github text-light p-3" style="font-size: 25px;"> </i>
-                                            </a>
-                                            </div>
-                                        </div>  
-                                    </div>
-                                </div>
-                                <div class="py-4">
-                                    <div class="card" style="background-color: rgba(1, 52, 24, 0.7);">
-                                        <div class="card-body text-light">
-                                        <h5>Lost and Found Web App</h5>
-                                        <img src="resources/lost-and-found-home.png" class="home-image p-2 pe-3 img-fluid" alt="image not found">
-                                        <img src="resources/lost-and-found-submit.png" class="submit-image p-2 pe-3 img-fluid" alt="image not found">
-                                        <p>A small team and I utilized scrum methodology to create this Django web app. This virtual lost and found integrates the Google OAuth and Maps API to facilitate a simple and effective user experience.</p>
-                                        <div>    
-                                            <a href="https://github.com/wyattoconnell/lost-and-found">
-                                                <i class="git2 bi bi-github text-light p-3" style="font-size: 25px;"> </i>
-                                            </a>
-                                            </div>
-                                        </div>  
-                                    </div>
-                                </div>
-                                <div class="py-4">
-                                    <div class="card" style="background-color: rgba(1, 52, 24, 0.7);">
-                                        <div class="card-body text-light">
-                                        <h5 >Intersections</h5>
-                                        <img src="resources/Screenshot 2024-09-03 at 1.37.12 PM.png" class="wordle-image p-2 pe-3 img-fluid" alt="image not found">
-                                        <p>Like many others, I habitually participate in the NYT word games each morning. I wanted to create my own variation that mimicked the aesthetics and satisfying animations that make games like connections and wordle so addicting. <br><br><b>*This project is still in progress* </b> I still need to implement local storage, instructions, scaling for mobile, and end-game behavior.</p>
-                                        <div>    
-                                            <a href="https://github.com/wyattoconnell/intersections">
-                                                <i class="git2 bi bi-github text-light p-3" style="font-size: 25px;"> </i>
-                                            </a>
-                                            </div>
-                                        </div>  
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                        </section>
-                    
-                    <section id="projects" style="height: 100vh;" class="projects">
-                        <div class="container">
-                            <h2 class="pb-3 ps-5 text-dark" style="font-family: 'Yeseva One', cursive; opacity: 0.7; padding-top: 50px;">
-                            recent projects
-                            </h2>
-                        </div>
-                        <div class="d-sm-flex text-black pe-3 ps-5" style="font-family: 'Work Sans', sans-serif;">
-
-                            <div class="comic">
-                                <div class="portfol card" id="portfol" style="background-color: rgba(1, 52, 24, 0.7);">
-                                    <div class="card-body">
-                                    <div style="display: flex">
-                                        <h5 class="text-light pt-1" >BestBet</h5>
-                                        <a href="https://github.com/wyattoconnell/bettingapp">
-                                        <i class="git1 bi bi-github text-light ps-3" style="font-size: 25px;"> </i>
-                                        </a>
-                                    </div>
-                                    <p class="p1 text-light"><i>A fictional sports betting application built with PHP, Postgres, and JavaScript.</i></p>
-                                    </div> 
-                                    <div class="body1 p-3 pt-0 text-light" id="body1">
-                                        <btn class="btn"><a style="text-decoration: none; color: white" href="https://cs4640.cs.virginia.edu/qdy5bq/bestbet/"><b>Try it out →</b></a></btn>
-                                        <img src="resources/Screenshot 2024-09-02 at 2.45.18 PM.png" class="comp-image p-2 pe-3 img-fluid" alt="image not found">
-                                    </div>
-                                </div>
-                                            
-                                <div class="niche card" id="niche" style="background-color: rgba(1, 52, 24, 0.7);">
-                                    <div class="card-body text-light">
-                                        <div style="display: flex">
-                                            <h5 class="text-light pt-1" >The Niche Index</h5>
-                                            <a href="https://github.com/wyattoconnell/NicheIndex">
-                                            <i class="git1 bi bi-github text-light ps-3" style="font-size: 25px;"> </i>
-                                            </a>
-                                        </div>
-                                        <p class="p2 text-light"><i>A web application that uses the Spotify API to display the obscurity of a user's taste. Implemented with React, JS, HTML, CSS, and Node.js.</i></p> 
-                                        <div class="body2" id="body2" >
-                                            <p>Users are given an overall “Niche Score” to represent how niche their library is. The score is produced by an algorithm I devised that leverages song virality and artist popularity. My goal with this project was to create an application that myself and my peers would actually find useful. This idea was completely original and therefore required a lot of experimentation with the UI/UX. I gained many valuable skills throughout the process: replicating Spotify’s pre-established design language, teaching myself how to navigate React and Node.js, making API calls, and scaling for mobile. New changes to Spotify's developer platform stipulate that third-party apps are placed into "development mode", which limits access to apps like this one. As a result, I decided to take down the Niche Index deployment, but feel free to check it out on GitHub!</p>
-                                            <img src="resources/compTopIMG.png" class="comp-image p-2 pe-3 img-fluid" alt="image not found">
-                                            <img src="resources/phoneBottomIMG.png" class="phone-image p-2 pe-3 img-fluid" alt="image not found">
-                                        </div> 
-                                    </div>
-                                </div>
-    
-                                <div class="django card" id="django" style="background-color: rgba(1, 52, 24, 0.7);">
-                                    <div class="card-body text-light">
-                                    <div style="display: flex;">
-                                        <h5 class="card-title pt-1">Lost and Found Web App</h5>
-                                        <a href="https://github.com/wyattoconnell/lost-and-found">
-                                            <i class="git2 bi bi-github text-light p-3" style="font-size: 25px;"> </i>
-                                        </a>
-                                    </div>
-                                    <p class="p3 text-light"><i>A small team and I utilized scrum methodology to create this Django web app. This virtual lost and found integrates the Google OAuth and Maps API to facilitate a simple and effective user experience.</i></p> 
-                                    <div class="body3 text-light" id="body3">
-                                        <p>Throughout development, we simulated a real-world, agile work environment. My group and I gained experience in communicating software design, continuous integration, devops, beta testing, and maintenance. I enjoyed working with a team and learning how to effectively distribute tasks. </p>
-                                        <img src="resources/lost-and-found-home.png" class="home-image p-2 pe-3 img-fluid" alt="image not found">
-                                        <img src="resources/lost-and-found-submit.png" class="submit-image p-2 pe-3 img-fluid" alt="image not found">
-                                    </div>
-                                    </div>
-                                </div>
-    
-                                <div class="gui card" id="gui" style="background-color: rgba(1, 52, 24, 0.7);">
-                                    <div class="card-body text-light">
-                                    <div style="display: flex;">
-                                        <h5 class="card-title pt-1">Intersections</h5>
-                                        <a href="https://github.com/wyattoconnell/intersections">
-                                            <i class="git2 bi bi-github text-light p-3" style="font-size: 25px;"> </i>
-                                        </a>
-                                    </div>
-                                    <p class="p4 text-light"><i>A completely original daily puzzle game created using Angular and deployed on Hostinger.</i></p>
-                                    </div>  
-                                    <div class="body4 text-light p-3 pt-0" id="body4">
-                                        <p>Like many others, I habitually participate in the NYT word games each morning. I wanted to create my own variation that mimicked the aesthetics and satisfying animations that make games like connections and wordle so addicting. <br><br><b>*This project is still in progress* </b> I still need to implement local storage, instructions, scaling for mobile, and end-game behavior. </p>
-                                        <btn class="btn"><a style="text-decoration: none; color: white" href="https://intersections.in/#/"><b>Try it out →</b></a></btn>
-                                        <img src="resources/Screenshot 2024-09-03 at 1.37.12 PM.png" class="p-2 img-fluid" alt="image not found">
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </section>
-
-                </div>
-                <nav class="navmenu d-sm-flex text-dark p-5 ps-0" style="font-family: 'Yeseva One', cursive; text-align: right; opacity: 0.7;">
-                    <ul class="menu" style="list-style: none">
-                        <li><a href="#about" class="nav-link"><h2 class="display-4">about</h2></a></li>
-                        <li><a href="#coursework" class="nav-link"><h2 class="display-4">experience</h2></a></li>
-                        <li><a href="#projects" class="nav-link"><h2 class="display-4">projects</h2></a></li>
-                        <li><a href="resources/OconnellResume2025.pdf" target="_blank" class="nav-link"><h2 class="display-4">resume</h2></a></li>
-                        <li><a href="https://www.linkedin.com/in/wyatt-o-connell-299185240/" target="_blank" class="nav-link"><h2 class="display-4">linkedin</h2></a></li>
-                        <li><a href="https://github.com/wyattoconnell" target="_blank" class="nav-link"><h2 class="display-4">github</h2></a></li>
-                    </ul>
-                </nav>
-            </div>
-            
-        </section>
-
-        <!--Train-->
-        <div class="pt-2">
-            <div class="steam-engine fixed-bottom" style="opacity:0;"></div>
+    <header class="topnav" id="topnav">
+      <div class="container topnav-inner">
+        <a class="topnav-brand" href="#top">wyatt o'connell</a>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <nav class="topnav-menu" id="topnavMenu">
+        <div class="container">
+          <ul>
+            <li><a href="#about">about</a></li>
+            <li><a href="#experience">experience</a></li>
+            <li><a href="#projects">projects</a></li>
+            <li><a href="resources/OconnellResume2025.pdf" target="_blank" rel="noopener">resume</a></li>
+            <li>
+              <div class="icon-row">
+                <a class="icon-link" href="https://github.com/wyattoconnell" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon"><use href="#icon-github"></use></svg></a>
+                <a class="icon-link" href="https://www.linkedin.com/in/wyatt-o-connell-299185240/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon"><use href="#icon-linkedin"></use></svg></a>
+              </div>
+            </li>
+          </ul>
         </div>
+      </nav>
+    </header>
 
-    
-    
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-        <script>
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-              anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-        
-                const targetId = this.getAttribute('href').substring(1);
-                const targetElement = document.getElementById(targetId);
-        
-                if (targetElement) {
-                  targetElement.scrollIntoView({
-                    behavior: 'smooth'
-                  });
-                }
-              });
-            });
+    <div class="container">
+      <section class="hero" id="top">
+        <nav class="sidenav" aria-label="Primary">
+          <ul>
+            <li><a href="#about">about</a></li>
+            <li><a href="#experience">experience</a></li>
+            <li><a href="#projects">projects</a></li>
+            <li><a href="resources/OconnellResume2025.pdf" target="_blank" rel="noopener">resume</a></li>
+            <li>
+              <div class="icon-row">
+                <a class="icon-link" href="https://github.com/wyattoconnell" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon"><use href="#icon-github"></use></svg></a>
+                <a class="icon-link" href="https://www.linkedin.com/in/wyatt-o-connell-299185240/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon"><use href="#icon-linkedin"></use></svg></a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <div>
+          <h1 class="hero-name">wyatt<br />o'connell</h1>
+          <p class="hero-tagline">university of virginia '25 · computer science, technology entrepreneurship</p>
+        </div>
+      </section>
 
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('nav a');
+      <section class="section" id="about">
+        <h2 class="section-title">about</h2>
+        <div class="about-body">
+          <img class="about-photo" src="resources/MyProject.png" alt="Portrait of Wyatt" />
+          <div class="about-text">
+            <p>
+              Hi, I'm Wyatt: a passionate developer with extensive experience in software engineering and a strong
+              eagerness to learn. Through personal projects, academic endeavors, and internships, I've significantly
+              contributed to various aspects of development, including system design, full-stack development,
+              testing, and DevOps. I thrive in collaborative environments and am driven by the opportunity to
+              express creativity in my work, as is evident in my personal projects. I'm seeking to join a dedicated
+              team where I can make a meaningful impact. In my free time, I like to play board games, basketball,
+              and ride my mountain bike.
+            </p>
+            <a class="button" href="resources/OconnellResume2025.pdf" target="_blank" rel="noopener">Download Full Resume</a>
+          </div>
+        </div>
+      </section>
 
-            const options = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.3 
-                };
+      <section class="section" id="experience">
+        <h2 class="section-title">experience</h2>
+        <div class="entry-list">
+          <div class="entry">
+            <div class="entry-meta">
+              <span class="place">Programming Languages for Web Apps</span>
+              Charlottesville, VA<br />
+              January 2024 – Present
+            </div>
+            <div class="entry-body">
+              <h3 class="entry-title">Teaching Assistant</h3>
+              <ul>
+                <li>Collaborate with faculty to design and refine a curriculum focused on modern web application programming languages</li>
+                <li>Advise student groups on the feasibility and best practices for their web application projects, ensuring alignment with design goals and industry standards</li>
+                <li>Grade tests and project sprints, providing constructive feedback to enhance student learning</li>
+              </ul>
+            </div>
+          </div>
 
-                const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                    const currentId = entry.target.getAttribute('id');
-                    navLinks.forEach(link => {
-                        if (link.getAttribute('href').includes(currentId)) {
-                        link.classList.add('active');
-                        } else {
-                        link.classList.remove('active');
-                        }
-                    });
-                    }
-                });
-                }, options);
+          <div class="entry">
+            <div class="entry-meta">
+              <span class="place">Scale AI</span>
+              Remote<br />
+              December 2023 – Present
+            </div>
+            <div class="entry-body">
+              <h3 class="entry-title">AI Trainer</h3>
+              <ul>
+                <li>Solved intricate programming problems and crafted responses to coding-related prompts for training large language models</li>
+                <li>Provided in-depth analysis of AI generated code</li>
+              </ul>
+            </div>
+          </div>
 
-                sections.forEach(section => {
-                observer.observe(section);
-                });
+          <div class="entry">
+            <div class="entry-meta">
+              <span class="place">KBR</span>
+              Chantilly, VA<br />
+              May – August 2024
+            </div>
+            <div class="entry-body">
+              <h3 class="entry-title">Software Development Intern</h3>
+              <ul>
+                <li>Collaborated with a team to develop a digitally engineered space system testing workflow</li>
+                <li>Leveraged Kubernetes to orchestrate application containers and databases</li>
+                <li>Contributed to an Angular frontend application to intuitively display data using JavaScript libraries</li>
+                <li>Set up a MySQL database for querying testing data</li>
+              </ul>
+            </div>
+          </div>
 
-                const gui = document.getElementById('gui');
-                const niche = document.getElementById('niche');
-                const portfol = document.getElementById('portfol');
-                const django = document.getElementById('django');
-                const body1 = document.getElementById('body1');
-                const body2 = document.getElementById('body2');
-                const body3 = document.getElementById('body3');
-                const body4 = document.getElementById('body4');
-            
+          <div class="entry">
+            <div class="entry-meta">
+              <span class="place">Coursework</span>
+              University of Virginia
+            </div>
+            <div class="entry-body">
+              <p class="coursework-text">
+                Data Structures and Algorithms I &amp; II, Discrete Math and Theory I &amp; II, Computer Systems and
+                Organization I &amp; II, Software Development Essentials, Advanced Software Development, Intro to
+                Cybersecurity, Internet Scale Applications, Programming Languages for Web Apps, Computer Game
+                Design, New Product Development, Intro Data Science with Python, Algorithmic Investing, CS
+                Education Practicum.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-                function pxToVw(pxValue) {
-                    const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
-                    const vwValue = (pxValue / vw) * 100;
-                    
-                    return vwValue;
-                }
+      <section class="section" id="projects">
+        <h2 class="section-title">projects</h2>
+        <div class="entry-list">
+          <div class="entry">
+            <div class="entry-meta">
+              <span class="place">BestBet</span>
+              2024
+              <p class="entry-stack">PHP · Postgres · JavaScript</p>
+            </div>
+            <div class="entry-body">
+              <h3 class="entry-title">Fictional sports betting application</h3>
+              <ul>
+                <li>Structured database models to support bets, users, and events</li>
+                <li>Built UI flows for browsing, placing, and tracking wagers</li>
+                <li>Practiced full-stack integration across auth, odds display, and transactional flows</li>
+              </ul>
+              <div class="entry-links">
+                <a class="demo-link" href="https://cs4640.cs.virginia.edu/qdy5bq/bestbet/" target="_blank" rel="noopener"><svg class="icon"><use href="#icon-external"></use></svg> Live Demo</a>
+                <a class="icon-link" href="https://github.com/wyattoconnell/bettingapp" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon"><use href="#icon-github"></use></svg></a>
+                <a class="learn-more" href="project-bestbet.html">Learn more →</a>
+              </div>
+            </div>
+          </div>
 
+          <div class="entry">
+            <div class="entry-meta">
+              <span class="place">The Niche Index</span>
+              2024
+              <p class="entry-stack">React · Node.js · Spotify API</p>
+            </div>
+            <div class="entry-body">
+              <h3 class="entry-title">Music library "obscurity score" calculator</h3>
+              <ul>
+                <li>Designed a multi-factor scoring model combining track virality and artist popularity</li>
+                <li>Built a UI that mirrors Spotify's design language while introducing new views</li>
+                <li>Taught myself React and Node.js, and integrated the Spotify API for live user data</li>
+              </ul>
+              <div class="entry-links">
+                <a class="icon-link" href="https://github.com/wyattoconnell/NicheIndex" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon"><use href="#icon-github"></use></svg></a>
+                <a class="learn-more" href="project-niche-index.html">Learn more →</a>
+              </div>
+            </div>
+          </div>
 
-                function guiMouseEnter() {
-                const djangoX = django.getBoundingClientRect().left;
-                const portfolX = portfol.getBoundingClientRect().left;
-                const jump = djangoX-portfolX;
+          <div class="entry">
+            <div class="entry-meta">
+              <span class="place">Lost and Found Web App</span>
+              2024
+              <p class="entry-stack">Django · Google OAuth · Maps API</p>
+            </div>
+            <div class="entry-body">
+              <h3 class="entry-title">Team-built virtual lost and found</h3>
+              <ul>
+                <li>Used scrum methodology on a small team to plan sprints and ship features</li>
+                <li>Integrated Google OAuth and the Maps API for a simple, effective user experience</li>
+                <li>Gained experience with continuous integration, DevOps, and beta testing</li>
+              </ul>
+              <div class="entry-links">
+                <a class="icon-link" href="https://github.com/wyattoconnell/lost-and-found" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon"><use href="#icon-github"></use></svg></a>
+                <a class="learn-more" href="project-lost-and-found.html">Learn more →</a>
+              </div>
+            </div>
+          </div>
 
-                gui.classList.add('gui-hovered');
-                body4.classList.add('gui-hovered');
-                gui.style.transform = 'translate(0px, -30vh)';
-                niche.style.transform = 'translate(0px, -30vh)';
-                portfol.style.transform = `translateX(${jump}px)`;
-                }
+          <div class="entry">
+            <div class="entry-meta">
+              <span class="place">Intersections</span>
+              In progress
+              <p class="entry-stack">Angular · Game UI · Animation</p>
+            </div>
+            <div class="entry-body">
+              <h3 class="entry-title">Daily word puzzle game</h3>
+              <ul>
+                <li>Designed an original puzzle format inspired by Wordle and Connections</li>
+                <li>Focused on crisp interaction design and clean game-state management</li>
+                <li>Next up: local storage for streaks, onboarding instructions, and mobile scaling</li>
+              </ul>
+              <div class="entry-links">
+                <a class="demo-link" href="https://intersections.in/#/" target="_blank" rel="noopener"><svg class="icon"><use href="#icon-external"></use></svg> Live Demo</a>
+                <a class="icon-link" href="https://github.com/wyattoconnell/intersections" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon"><use href="#icon-github"></use></svg></a>
+                <a class="learn-more" href="project-intersections.html">Learn more →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-                function guiMouseLeave() {
-                gui.classList.remove('gui-hovered');
-                body4.classList.remove('gui-hovered');
-                gui.style.transform = 'none';
-                niche.style.transform = 'none';
-                portfol.style.transform = 'none';
-                gui.scrollTop = 0;
-                }
+      <footer class="footer">
+        <div class="footer-links">
+          <a href="resources/OconnellResume2025.pdf" target="_blank" rel="noopener">Resume</a>
+          <a href="mailto:wyattmoconnell@gmail.com">Email</a>
+          <a class="icon-link" href="https://github.com/wyattoconnell" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon"><use href="#icon-github"></use></svg></a>
+          <a class="icon-link" href="https://www.linkedin.com/in/wyatt-o-connell-299185240/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon"><use href="#icon-linkedin"></use></svg></a>
+        </div>
+      </footer>
+    </div>
 
-                function nicheMouseEnter() {
+    <script>
+      const topnav = document.getElementById('topnav');
+      const hero = document.getElementById('top');
+      const hamburgerBtn = document.getElementById('hamburgerBtn');
+      const topnavMenu = document.getElementById('topnavMenu');
 
-                const djangoX = django.getBoundingClientRect().left;
-                const portfolX = portfol.getBoundingClientRect().left;
-                const jump = djangoX-portfolX;
+      function onScroll() {
+        const threshold = hero.offsetTop + hero.offsetHeight - 80;
+        if (window.scrollY > threshold) {
+          topnav.classList.add('visible');
+        } else {
+          topnav.classList.remove('visible');
+          topnav.classList.remove('open');
+          hamburgerBtn.setAttribute('aria-expanded', 'false');
+        }
+      }
 
-                var jumpVW = pxToVw(jump);
-                jumpVW = -1*(jumpVW + 30);
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
 
-                niche.classList.add('niche-hovered');
-                body2.classList.add('niche-hovered');
-                niche.style.transform = 'translate(-30vw, 0)';
-                gui.style.transform = 'translate(0px, 55vh)';
-                portfol.style.transform = 'translate(-30vw, 0px)';
-                django.style.transform = `translateX(${jumpVW}vw)`;
-                }
+      hamburgerBtn.addEventListener('click', () => {
+        const isOpen = topnav.classList.toggle('open');
+        hamburgerBtn.setAttribute('aria-expanded', String(isOpen));
+      });
 
-                function nicheMouseLeave() {
-                niche.classList.remove('niche-hovered');
-                body2.classList.remove('niche-hovered');
-                niche.style.transform = 'none';
-                gui.style.transform = 'none';
-                portfol.style.transform = 'none';
-                django.style.transform = 'none';
-                niche.scrollTop = 0;
-                }
-
-                function djangoMouseEnter() {
-                django.classList.add('django-hovered');
-                body3.classList.add('django-hovered');
-                django.style.transform = 'translate(0vw, -30vh)';
-                gui.style.transform = 'translate(30vw, -30vh)';
-                portfol.style.transform = 'translate(10vw, -30vh)';
-                niche.style.transform = 'translate(10vw, -30vh)';
-                }
-
-                function djangoMouseLeave() {
-                django.classList.remove('django-hovered');
-                body3.classList.remove('django-hovered');
-                django.style.transform = 'none';
-                gui.style.transform = 'none';
-                portfol.style.transform = 'none';
-                niche.style.transform = 'none';
-                django.scrollTop = 0;
-                }
-
-                function portfolMouseEnter() {
-                portfol.classList.add('portfol-hovered');
-                body1.classList.add('portfol-hovered');
-                niche.style.transform = 'translate(13vw, 0px)';
-                gui.style.transform = 'translateY(17vh)';
-                django.style.transform = 'translateY(17vh)';
-                }
-
-                function portfolMouseLeave() {
-                portfol.classList.remove('portfol-hovered');
-                body1.classList.remove('portfol-hovered');
-                niche.style.transform = 'none';
-                gui.style.transform = 'none';
-                django.style.transform = 'none';
-                portfol.scrollTop = 0;
-                }
-
-                gui.addEventListener('click', guiMouseEnter);
-                gui.addEventListener('mouseleave', guiMouseLeave);
-                niche.addEventListener('click', nicheMouseEnter);
-                niche.addEventListener('mouseleave', nicheMouseLeave);
-                django.addEventListener('click', djangoMouseEnter);
-                django.addEventListener('mouseleave', djangoMouseLeave);
-                portfol.addEventListener('click', portfolMouseEnter);
-                portfol.addEventListener('mouseleave', portfolMouseLeave);
-            
-          </script>
-        
-    </body>
+      topnavMenu.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          topnav.classList.remove('open');
+          hamburgerBtn.setAttribute('aria-expanded', 'false');
+        });
+      });
+    </script>
+  </body>
 </html>

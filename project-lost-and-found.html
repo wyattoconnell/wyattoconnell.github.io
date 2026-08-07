@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Work+Sans:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Lost and Found · Wyatt O'Connell</title>
+  </head>
+  <body>
+    <header class="detail-header">
+      <div class="container detail-header-inner">
+        <a class="topnav-brand" href="index.html">wyatt o'connell</a>
+        <a class="back-link" href="index.html#projects">← Back to projects</a>
+      </div>
+    </header>
+
+    <main class="container md-page">
+      <article id="md-content" class="md-content"></article>
+    </main>
+
+    <script type="text/markdown" id="md-source">
+# Lost and Found Web App
+
+*Django · Google OAuth · Maps API — 2024*
+
+Edit the markdown block in `project-lost-and-found.html` to add more
+detail, screenshots, or write-up.
+
+## Overview
+
+A small team and I used scrum methodology to build this virtual lost and
+found. It integrates Google OAuth and the Maps API for a simple,
+effective submission and search experience.
+
+## Details
+
+Add more here: team structure, sprint cadence, what shipped vs. what
+didn't.
+
+![Lost and Found homepage](resources/lost-and-found-home.png)
+![Lost and Found submission form](resources/lost-and-found-submit.png)
+
+## Links
+
+- [GitHub repo](https://github.com/wyattoconnell/lost-and-found)
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+      const src = document.getElementById('md-source').textContent;
+      document.getElementById('md-content').innerHTML = marked.parse(src);
+    </script>
+  </body>
+</html>

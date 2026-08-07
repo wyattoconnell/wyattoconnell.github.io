@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Work+Sans:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Intersections · Wyatt O'Connell</title>
+  </head>
+  <body>
+    <header class="detail-header">
+      <div class="container detail-header-inner">
+        <a class="topnav-brand" href="index.html">wyatt o'connell</a>
+        <a class="back-link" href="index.html#projects">← Back to projects</a>
+      </div>
+    </header>
+
+    <main class="container md-page">
+      <article id="md-content" class="md-content"></article>
+    </main>
+
+    <script type="text/markdown" id="md-source">
+# Intersections
+
+*Angular · Game UI · Animation — In progress*
+
+Edit the markdown block in `project-intersections.html` to add more
+detail, screenshots, or write-up.
+
+## Overview
+
+Like a lot of people, I habitually play the NYT word games each morning.
+Intersections is my own daily puzzle, aiming for the same crisp
+interaction design and satisfying animations that make games like
+Connections and Wordle so addicting.
+
+## Details
+
+Add more here: puzzle mechanics, animation approach, what's left before
+launch.
+
+![Intersections puzzle screen](resources/Screenshot%202024-09-03%20at%201.37.12%20PM.png)
+
+**Still in progress** — next up is local storage for streaks, onboarding
+instructions, and mobile scaling.
+
+## Links
+
+- [Live demo](https://intersections.in/#/)
+- [GitHub repo](https://github.com/wyattoconnell/intersections)
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+      const src = document.getElementById('md-source').textContent;
+      document.getElementById('md-content').innerHTML = marked.parse(src);
+    </script>
+  </body>
+</html>
