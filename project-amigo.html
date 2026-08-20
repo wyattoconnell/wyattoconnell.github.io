@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Work+Sans:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Amigo · Wyatt O'Connell</title>
+  </head>
+  <body>
+    <header class="detail-header">
+      <div class="container detail-header-inner">
+        <a class="topnav-brand" href="index.html">wyatt o'connell</a>
+        <a class="back-link" href="index.html#projects">← Back to projects</a>
+      </div>
+    </header>
+
+    <main class="container md-page">
+      <article id="md-content" class="md-content"></article>
+    </main>
+
+    <script type="text/markdown" id="md-source">
+# Amigo
+
+*Garmin Connect IQ · FastAPI · Next.js · Supabase — 2026*
+
+Edit the markdown block in `project-amigo.html` to add more detail,
+screenshots, or write-up.
+
+## Overview
+
+Amigo is a Garmin watch face that turns your daily steps, distance, and
+active calories into a live leaderboard against your friends. There's no
+email/password signup — your identity in the app is a short friend code,
+optionally paired with a PIN if you want to also check your stats from the
+companion web app. The watch face syncs in the background on its own
+schedule, so the leaderboard stays current without you having to open
+anything.
+
+<div class="demo-preview demo-preview-wide">
+  <div class="demo-preview-chrome">
+    <span class="demo-preview-dots"><span></span><span></span><span></span></span>
+    <span class="demo-preview-url">amigo-watchface.app</span>
+  </div>
+  <div class="demo-preview-frame">
+    <img src="resources/preview-amigo.png" loading="lazy" alt="Amigo dashboard screenshot" />
+  </div>
+  <a class="demo-preview-link" href="https://amigo-watchface.app/" target="_blank"
+     rel="noopener" aria-label="Open live demo of Amigo"></a>
+</div>
+
+## Architecture
+
+Amigo is really three deployables kept in sync: the watch face pushes
+device data in the background, a single FastAPI service answers both the
+watch and the companion web app, and Supabase holds the shared state
+(friend codes, rolling per-day stats, and all-time bests that survive past
+the stats retention window). The watch face repo and the server repo are
+developed and deployed independently — this is the connective tissue
+between them.
+
+Every friend's watch is doing the same two things independently: pushing
+its own stats up in the background, and pulling everyone else's stats back
+down so the leaderboard on your wrist stays current without opening the
+app. The server is the single hub all of those watches sync through.
+
+<div class="arch-diagram">
+  <div class="arch-tier">
+    <div class="arch-branch">
+      <!-- TODO: point at github.com/wyattoconnell/amigo/tree/main/source -->
+      <a class="arch-node" href="#">
+        <span class="arch-node-title">Garmin Watches</span>
+        <span class="arch-node-sub">Connect IQ &middot; you + every friend, each running the same watchface</span>
+      </a>
+      <div class="arch-arrow arch-arrow-bidi">
+        <div class="arch-arrow-line">
+          <span class="arch-arrow-glyph">&uarr;</span>
+          <span class="arch-arrow-label">POST /sync (background) &mdash; each watch pushes its own steps, miles, calories</span>
+        </div>
+        <div class="arch-arrow-line">
+          <span class="arch-arrow-glyph">&darr;</span>
+          <span class="arch-arrow-label">GET /batch-stats, /leaderboard &mdash; friends' stats pulled back down to render on-device</span>
+        </div>
+      </div>
+    </div>
+    <div class="arch-branch">
+      <div class="arch-node" tabindex="0">
+        <span class="arch-node-title">Friend / User</span>
+        <span class="arch-node-sub">Browser, companion web app</span>
+      </div>
+      <div class="arch-arrow">
+        <span class="arch-arrow-glyph">&darr;</span>
+        <span class="arch-arrow-label">HTTPS</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="arch-group">
+    <span class="arch-group-label">Vercel</span>
+    <div class="arch-group-inner">
+      <!-- TODO: point at github.com/wyattocai-cpu/amigo-server/blob/main/main.py -->
+      <a class="arch-node arch-node-sm" href="#">
+        <span class="arch-node-title">FastAPI Backend</span>
+        <span class="arch-node-sub">main.py &middot; register &middot; login &middot; sync &middot; stats &middot; leaderboard</span>
+      </a>
+      <div class="arch-arrow arch-arrow-h">
+        <span class="arch-arrow-glyph">&larr;</span>
+        <span class="arch-arrow-label">fetch()</span>
+      </div>
+      <!-- TODO: point at github.com/wyattocai-cpu/amigo-server/tree/main/web -->
+      <a class="arch-node arch-node-sm" href="#">
+        <span class="arch-node-title">Next.js Web App</span>
+        <span class="arch-node-sub">web/ &middot; dashboard, leaderboard, signin</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="arch-arrow arch-arrow-single">
+    <span class="arch-arrow-glyph">&darr;</span>
+    <span class="arch-arrow-label">supabase-py &middot; read / write</span>
+  </div>
+
+  <!-- TODO: point at github.com/wyattocai-cpu/amigo-server (migration_*.sql) -->
+  <a class="arch-node arch-node-db" href="#">
+    <span class="arch-node-title">Supabase (Postgres)</span>
+    <span class="arch-node-sub">users &middot; stats &middot; rate_limits</span>
+  </a>
+</div>
+
+## Details
+
+Add more here: how background sync scheduling works, the friend-code /
+PIN auth model, screenshots of the watch face and dashboard, what you'd
+change with more time.
+
+## Links
+
+- [Watch face repo (GitHub)](https://github.com/wyattoconnell/amigo)
+- [Server repo (GitHub)](https://github.com/wyattocai-cpu/amigo-server)
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+      const src = document.getElementById('md-source').textContent;
+      document.getElementById('md-content').innerHTML = marked.parse(src);
+    </script>
+  </body>
+</html>

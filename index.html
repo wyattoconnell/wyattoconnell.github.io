@@ -22,6 +22,9 @@
         <path d="M10 1h5v5h-1.5V3.56L7.03 10.03 6 9l6.44-6.44H10V1z" />
         <path d="M2.5 3A1.5 1.5 0 0 0 1 4.5v9A1.5 1.5 0 0 0 2.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9h-1.5v4.5h-9v-9H7V3H2.5z" />
       </symbol>
+      <symbol id="icon-medium" viewBox="0 0 24 24">
+        <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z" />
+      </symbol>
     </svg>
 
     <header class="topnav" id="topnav">
@@ -37,11 +40,12 @@
             <li><a href="#about">about</a></li>
             <li><a href="#experience">experience</a></li>
             <li><a href="#projects">projects</a></li>
-            <li><a href="resources/OconnellResume2025.pdf" target="_blank" rel="noopener">resume</a></li>
+            <li><a href="#" data-resume-link target="_blank" rel="noopener">resume</a></li>
             <li>
               <div class="icon-row">
                 <a class="icon-link" href="https://github.com/wyattoconnell" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon"><use href="#icon-github"></use></svg></a>
                 <a class="icon-link" href="https://www.linkedin.com/in/wyatt-o-connell-299185240/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon"><use href="#icon-linkedin"></use></svg></a>
+                <a class="icon-link" href="https://medium.com/@wyattmoconnell" target="_blank" rel="noopener" aria-label="Medium"><svg class="icon"><use href="#icon-medium"></use></svg></a>
               </div>
             </li>
           </ul>
@@ -56,18 +60,19 @@
             <li><a href="#about">about</a></li>
             <li><a href="#experience">experience</a></li>
             <li><a href="#projects">projects</a></li>
-            <li><a href="resources/OconnellResume2025.pdf" target="_blank" rel="noopener">resume</a></li>
+            <li><a href="#" data-resume-link target="_blank" rel="noopener">resume</a></li>
             <li>
               <div class="icon-row">
                 <a class="icon-link" href="https://github.com/wyattoconnell" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon"><use href="#icon-github"></use></svg></a>
                 <a class="icon-link" href="https://www.linkedin.com/in/wyatt-o-connell-299185240/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon"><use href="#icon-linkedin"></use></svg></a>
+                <a class="icon-link" href="https://medium.com/@wyattmoconnell" target="_blank" rel="noopener" aria-label="Medium"><svg class="icon"><use href="#icon-medium"></use></svg></a>
               </div>
             </li>
           </ul>
         </nav>
         <div>
           <h1 class="hero-name">wyatt<br />o'connell</h1>
-          <p class="hero-tagline">university of virginia '25 · computer science, technology entrepreneurship</p>
+          <p class="hero-tagline">software engineer · platform infrastructure & full-stack web</p>
         </div>
       </section>
 
@@ -85,7 +90,6 @@
               team where I can make a meaningful impact. In my free time, I like to play board games, basketball,
               and ride my mountain bike.
             </p>
-            <a class="button" href="resources/OconnellResume2025.pdf" target="_blank" rel="noopener">Download Full Resume</a>
           </div>
         </div>
       </section>
@@ -93,11 +97,33 @@
       <section class="section" id="experience">
         <h2 class="section-title">experience</h2>
         <div class="entry-list">
+            <div class="entry">
+            <div class="entry-meta">
+              <div class="entry-meta-header">
+                <img class="entry-logo" src="resources/logo-appian.png" alt="Appian" />
+                <span class="place">Appian</span>
+              </div>
+              McClean, VA<br />
+              October 2025 – Present
+            </div>
+            <div class="entry-body">
+              <h3 class="entry-title">Software Engineer</h3>
+              <ul>
+                <li>Own CI/CD platform infrastructure that other engineering teams build on to ship safely; vetting and shipping code to a low-code platform used by 5K+ enterprise customers</li>
+                <li>Co-designed the shared pipeline architecture for a company-wide migration from GitHub/Jenkins to GitLab across 1,000+ engineers, including incremental, dependency-aware CI job selection to cut build cost and latency</li>
+                <li>Built an AMI factory (Jenkins controllers + GitLab runner EC2 fleets) as a reusable primitive other teams provision against, owning vulnerability remediation and lifecycle management</li>
+              </ul>
+            </div>
+          </div>
+
           <div class="entry">
             <div class="entry-meta">
-              <span class="place">Programming Languages for Web Apps</span>
+              <div class="entry-meta-header">
+                <img class="entry-logo" src="resources/logo-uva.png" alt="University of Virginia" />
+                <span class="place">UVa</span>
+              </div>
               Charlottesville, VA<br />
-              January 2024 – Present
+              January 2024 – May 2025
             </div>
             <div class="entry-body">
               <h3 class="entry-title">Teaching Assistant</h3>
@@ -111,12 +137,15 @@
 
           <div class="entry">
             <div class="entry-meta">
-              <span class="place">Scale AI</span>
+              <div class="entry-meta-header">
+                <img class="entry-logo" src="resources/logo-scaleai.png" alt="Scale AI" />
+                <span class="place">Scale AI</span>
+              </div>
               Remote<br />
-              December 2023 – Present
+              December 2023 – May 2025
             </div>
             <div class="entry-body">
-              <h3 class="entry-title">AI Trainer</h3>
+              <h3 class="entry-title">Expert Contributor</h3>
               <ul>
                 <li>Solved intricate programming problems and crafted responses to coding-related prompts for training large language models</li>
                 <li>Provided in-depth analysis of AI generated code</li>
@@ -126,12 +155,14 @@
 
           <div class="entry">
             <div class="entry-meta">
-              <span class="place">KBR</span>
+              <div class="entry-meta-header">
+                <img class="entry-logo entry-logo-wordmark" src="resources/logo-kbr.png" alt="KBR" />
+              </div>
               Chantilly, VA<br />
               May – August 2024
             </div>
             <div class="entry-body">
-              <h3 class="entry-title">Software Development Intern</h3>
+              <h3 class="entry-title">NSS Systems Engineering Intern</h3>
               <ul>
                 <li>Collaborated with a team to develop a digitally engineered space system testing workflow</li>
                 <li>Leveraged Kubernetes to orchestrate application containers and databases</li>
@@ -143,16 +174,12 @@
 
           <div class="entry">
             <div class="entry-meta">
-              <span class="place">Coursework</span>
+              <span class="place">Favorite Coursework</span>
               University of Virginia
             </div>
             <div class="entry-body">
               <p class="coursework-text">
-                Data Structures and Algorithms I &amp; II, Discrete Math and Theory I &amp; II, Computer Systems and
-                Organization I &amp; II, Software Development Essentials, Advanced Software Development, Intro to
-                Cybersecurity, Internet Scale Applications, Programming Languages for Web Apps, Computer Game
-                Design, New Product Development, Intro Data Science with Python, Algorithmic Investing, CS
-                Education Practicum.
+                Advanced Software Development, Internet Scale Applications, Programming Languages for Web Apps, New Product Development, Algorithmic Investing, and many more.
               </p>
             </div>
           </div>
@@ -164,30 +191,87 @@
         <div class="entry-list">
           <div class="entry">
             <div class="entry-meta">
-              <span class="place">BestBet</span>
-              2024
-              <p class="entry-stack">PHP · Postgres · JavaScript</p>
+              <span class="place">Amigo</span>
+              2026
+              <div class="stack-row">
+                <p class="entry-stack">Garmin Connect IQ · FastAPI · Next.js · Supabase</p>
+              </div>
             </div>
             <div class="entry-body">
-              <h3 class="entry-title">Fictional sports betting application</h3>
-              <ul>
-                <li>Structured database models to support bets, users, and events</li>
-                <li>Built UI flows for browsing, placing, and tracking wagers</li>
-                <li>Practiced full-stack integration across auth, odds display, and transactional flows</li>
-              </ul>
-              <div class="entry-links">
-                <a class="demo-link" href="https://cs4640.cs.virginia.edu/qdy5bq/bestbet/" target="_blank" rel="noopener"><svg class="icon"><use href="#icon-external"></use></svg> Live Demo</a>
-                <a class="icon-link" href="https://github.com/wyattoconnell/bettingapp" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon"><use href="#icon-github"></use></svg></a>
-                <a class="learn-more" href="project-bestbet.html">Learn more →</a>
+              <div class="entry-split">
+                <div class="entry-split-text">
+                  <h3 class="entry-title">Garmin watch face + companion app fitness leaderboard</h3>
+                  <ul>
+                    <li>Built a Connect IQ watch face that background-syncs steps, distance, and calories to a shared backend</li>
+                    <li>Designed a friend-code identity system (no email/password) shared across the watch face and web app</li>
+                    <li>Built a FastAPI + Supabase backend serving both the device and a Next.js companion dashboard</li>
+                  </ul>
+                  <div class="entry-links">
+                    <a class="demo-link" href="https://amigo-watchface.app/" target="_blank" rel="noopener"><svg class="icon"><use href="#icon-external"></use></svg> Live Demo</a>
+                    <a class="learn-more" href="project-amigo.html">Learn more →</a>
+                  </div>
+                </div>
+                <div class="demo-preview">
+                  <div class="demo-preview-chrome">
+                    <span class="demo-preview-dots"><span></span><span></span><span></span></span>
+                    <span class="demo-preview-url">amigo-watchface.app</span>
+                  </div>
+                  <div class="demo-preview-frame">
+                    <img src="resources/preview-amigo.png" loading="lazy" alt="Amigo dashboard screenshot" />
+                  </div>
+                  <a class="demo-preview-link" href="https://amigo-watchface.app/" target="_blank"
+                     rel="noopener" aria-label="Open live demo of Amigo"></a>
+                </div>
               </div>
             </div>
           </div>
 
           <div class="entry">
             <div class="entry-meta">
+              <span class="place">Intersections</span>
+              2025
+              <div class="stack-row">
+                <p class="entry-stack">Angular · Figma · Supabase</p>
+                <a class="icon-link" href="https://github.com/wyattoconnell/intersections" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon"><use href="#icon-github"></use></svg></a>
+              </div>
+            </div>
+            <div class="entry-body">
+              <div class="entry-split">
+                <div class="entry-split-text">
+                  <h3 class="entry-title">Daily word puzzle game</h3>
+                  <ul>
+                    <li>Designed an original puzzle format inspired by Wordle and Connections</li>
+                    <li>Focused on crisp interaction design and clean game-state management</li>
+                    <li>Next up: local storage for streaks, onboarding instructions, and mobile scaling</li>
+                  </ul>
+                  <div class="entry-links">
+                    <a class="demo-link" href="https://intersections.in/#/" target="_blank" rel="noopener"><svg class="icon"><use href="#icon-external"></use></svg> Live Demo</a>
+                    <a class="learn-more" href="project-intersections.html">Learn more →</a>
+                  </div>
+                </div>
+                <div class="demo-preview">
+                  <div class="demo-preview-chrome">
+                    <span class="demo-preview-dots"><span></span><span></span><span></span></span>
+                    <span class="demo-preview-url">intersections.in</span>
+                  </div>
+                  <div class="demo-preview-frame">
+                    <img src="resources/preview-intersections.png" loading="lazy" alt="Intersections puzzle screenshot" />
+                  </div>
+                  <a class="demo-preview-link" href="https://intersections.in/#/" target="_blank"
+                     rel="noopener" aria-label="Open live demo of Intersections"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+                    <div class="entry">
+            <div class="entry-meta">
               <span class="place">The Niche Index</span>
               2024
-              <p class="entry-stack">React · Node.js · Spotify API</p>
+              <div class="stack-row">
+                <p class="entry-stack">React · Node.js · Spotify API</p>
+                <a class="icon-link" href="https://github.com/wyattoconnell/NicheIndex" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon"><use href="#icon-github"></use></svg></a>
+              </div>
             </div>
             <div class="entry-body">
               <h3 class="entry-title">Music library "obscurity score" calculator</h3>
@@ -197,49 +281,7 @@
                 <li>Taught myself React and Node.js, and integrated the Spotify API for live user data</li>
               </ul>
               <div class="entry-links">
-                <a class="icon-link" href="https://github.com/wyattoconnell/NicheIndex" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon"><use href="#icon-github"></use></svg></a>
                 <a class="learn-more" href="project-niche-index.html">Learn more →</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="entry">
-            <div class="entry-meta">
-              <span class="place">Lost and Found Web App</span>
-              2024
-              <p class="entry-stack">Django · Google OAuth · Maps API</p>
-            </div>
-            <div class="entry-body">
-              <h3 class="entry-title">Team-built virtual lost and found</h3>
-              <ul>
-                <li>Used scrum methodology on a small team to plan sprints and ship features</li>
-                <li>Integrated Google OAuth and the Maps API for a simple, effective user experience</li>
-                <li>Gained experience with continuous integration, DevOps, and beta testing</li>
-              </ul>
-              <div class="entry-links">
-                <a class="icon-link" href="https://github.com/wyattoconnell/lost-and-found" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon"><use href="#icon-github"></use></svg></a>
-                <a class="learn-more" href="project-lost-and-found.html">Learn more →</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="entry">
-            <div class="entry-meta">
-              <span class="place">Intersections</span>
-              In progress
-              <p class="entry-stack">Angular · Game UI · Animation</p>
-            </div>
-            <div class="entry-body">
-              <h3 class="entry-title">Daily word puzzle game</h3>
-              <ul>
-                <li>Designed an original puzzle format inspired by Wordle and Connections</li>
-                <li>Focused on crisp interaction design and clean game-state management</li>
-                <li>Next up: local storage for streaks, onboarding instructions, and mobile scaling</li>
-              </ul>
-              <div class="entry-links">
-                <a class="demo-link" href="https://intersections.in/#/" target="_blank" rel="noopener"><svg class="icon"><use href="#icon-external"></use></svg> Live Demo</a>
-                <a class="icon-link" href="https://github.com/wyattoconnell/intersections" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon"><use href="#icon-github"></use></svg></a>
-                <a class="learn-more" href="project-intersections.html">Learn more →</a>
               </div>
             </div>
           </div>
@@ -248,15 +290,21 @@
 
       <footer class="footer">
         <div class="footer-links">
-          <a href="resources/OconnellResume2025.pdf" target="_blank" rel="noopener">Resume</a>
+          <a href="#" data-resume-link target="_blank" rel="noopener">Resume</a>
           <a href="mailto:wyattmoconnell@gmail.com">Email</a>
           <a class="icon-link" href="https://github.com/wyattoconnell" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon"><use href="#icon-github"></use></svg></a>
           <a class="icon-link" href="https://www.linkedin.com/in/wyatt-o-connell-299185240/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon"><use href="#icon-linkedin"></use></svg></a>
+          <a class="icon-link" href="https://medium.com/@wyattmoconnell" target="_blank" rel="noopener" aria-label="Medium"><svg class="icon"><use href="#icon-medium"></use></svg></a>
         </div>
       </footer>
     </div>
 
     <script>
+      const RESUME_URL = 'resources/OconnellResume2025.pdf';
+      document.querySelectorAll('[data-resume-link]').forEach((link) => {
+        link.href = RESUME_URL;
+      });
+
       const topnav = document.getElementById('topnav');
       const hero = document.getElementById('top');
       const hamburgerBtn = document.getElementById('hamburgerBtn');
