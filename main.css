@@ -346,30 +346,6 @@ button {
   margin-bottom: 4px;
 }
 
-.entry-meta-header {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  margin-bottom: 6px;
-}
-
-.entry-meta-header .place {
-  margin-bottom: 0;
-}
-
-.entry-logo {
-  display: block;
-  width: 26px;
-  height: 26px;
-  object-fit: contain;
-  flex: 0 0 auto;
-}
-
-.entry-logo-wordmark {
-  width: auto;
-  height: 34px;
-}
-
 .entry-title {
   font-family: "Yeseva One", cursive;
   font-size: 18px;
@@ -450,7 +426,7 @@ button {
 .demo-preview-url {
   font-size: 11px;
   color: var(--muted);
-  font-family: "SF Mono", Menlo, Consolas, monospace;
+  font-family: "Work Sans", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -691,6 +667,49 @@ button {
 .md-content pre code {
   background: none;
   padding: 0;
+}
+
+/* ---------- Inline figures ---------- */
+
+.md-figure {
+  margin: 24px 0;
+  text-align: center;
+}
+
+.md-figure img {
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+  border-radius: 6px;
+}
+
+.md-figure-wide img {
+  max-width: 480px;
+}
+
+.md-figure-narrow img {
+  max-width: 340px;
+}
+
+.md-figure-portrait img {
+  width: auto;
+  max-width: 100%;
+  max-height: 460px;
+}
+
+.md-img-row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 24px 0;
+}
+
+.md-img-row img {
+  flex: 1;
+  max-width: 340px;
+  width: 100%;
+  margin: 0;
+  border-radius: 6px;
 }
 
 /* ---------- Architecture diagram ---------- */
@@ -936,6 +955,20 @@ a.arch-node {
 
   .back-link {
     font-size: 13px;
+  }
+
+  .md-img-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .md-img-row img {
+    max-width: 340px;
+  }
+
+  .md-figure-portrait img {
+    width: 100%;
+    max-height: none;
   }
 
   .arch-tier,

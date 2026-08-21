@@ -25,47 +25,34 @@
     <script type="text/markdown" id="md-source">
 # Amigo
 
-*Garmin Connect IQ · FastAPI · Next.js · Supabase — 2026*
+*Garmin Connect IQ · FastAPI · Next.js · Supabase*
 
-Edit the markdown block in `project-amigo.html` to add more detail,
-screenshots, or write-up.
+## The Problem
 
-## Overview
+I've been wearing a Garmin consistently since I was gifted one this past Christmas. Despite its wealth of features, I find myself really only using it to track my steps and record my runs. The watch is perfect for monitoring my pace and heart rate when I'm out on a jog, but when I finish, that data just sits on my watch… never to be used again.
 
-Amigo is a Garmin watch face that turns your daily steps, distance, and
-active calories into a live leaderboard against your friends. There's no
-email/password signup — your identity in the app is a short friend code,
-optionally paired with a PIN if you want to also check your stats from the
-companion web app. The watch face syncs in the background on its own
-schedule, so the leaderboard stays current without you having to open
-anything.
+This, of course, is not a unique problem; anybody who's ever met a marathon runner knows that the longer one runs, the stronger their desire is to tell everyone about it. For most, the solution to this innate need to brag is Strava. Strava is a running/biking social media platform that maintains a tense yet symbiotic relationship with Garmin. Garmin users can record activities from their watches and upload and post via Strava.
 
-<div class="demo-preview demo-preview-wide">
-  <div class="demo-preview-chrome">
-    <span class="demo-preview-dots"><span></span><span></span><span></span></span>
-    <span class="demo-preview-url">amigo-watchface.app</span>
-  </div>
-  <div class="demo-preview-frame">
-    <img src="resources/preview-amigo.png" loading="lazy" alt="Amigo dashboard screenshot" />
-  </div>
-  <a class="demo-preview-link" href="https://amigo-watchface.app/" target="_blank"
-     rel="noopener" aria-label="Open live demo of Amigo"></a>
+For me, my measly 7 followers did not justify this extra step. Uploading to Strava requires bouncing between two different apps, and often takes minutes to complete the data transfer.
+
+Nevertheless, I still had a desire to stay connected and present, in a sense, for my girlfriend's lunch-break walks in New York or my dad's marathon training back in California. So I decided to build a better way.
+
+## Amigo
+
+My goal for Amigo was to eliminate all barriers to sharing fitness data and increase competition and connectivity between friends. The result is a simplistically designed watchface, publicly available on the ConnectIQ store, that displays a live leaderboard of all your friends' daily stats.
+
+Upon downloading the watchface, each user is assigned a unique code. Sharing that code with a friend lets them start pulling that user's data onto their leaderboard immediately. Every user's data is held centrally in a database, which is queried via API by each watch at a cadence of 5 minutes.
+
+I also built a companion web app that serves as an aggregate leaderboard for all users, as well as housing FAQs and my privacy policy. Users can log in to the web app with their code to view advanced analytics and historical data.
+
+<div class="md-figure md-figure-portrait">
+  <img src="resources/amigo-app.png" alt="Amigo companion web app screenshot" />
 </div>
 
 ## Architecture
 
-Amigo is really three deployables kept in sync: the watch face pushes
-device data in the background, a single FastAPI service answers both the
-watch and the companion web app, and Supabase holds the shared state
-(friend codes, rolling per-day stats, and all-time bests that survive past
-the stats retention window). The watch face repo and the server repo are
-developed and deployed independently — this is the connective tissue
-between them.
+The beauty of this system is in its simplicity. It's not much more than an API request from each watch and a response resulting from a database query for the requested codes.
 
-Every friend's watch is doing the same two things independently: pushing
-its own stats up in the background, and pulling everyone else's stats back
-down so the leaderboard on your wrist stays current without opening the
-app. The server is the single hub all of those watches sync through.
 
 <div class="arch-diagram">
   <div class="arch-tier">
@@ -130,16 +117,44 @@ app. The server is the single hub all of those watches sync through.
   </a>
 </div>
 
-## Details
+The database also runs cron jobs to reset users' statistics at midnight in each user's timezone and to delete old data and abandoned accounts.
 
-Add more here: how background sync scheduling works, the friend-code /
-PIN auth model, screenshots of the watch face and dashboard, what you'd
-change with more time.
+## Design
 
-## Links
+The design for this product went through few iterations. I wanted to display as much information as possible without compromising the time or leaderboard visibility. I failed to consider, in my initial designs, the variety of displays I'd have to accommodate. A Garmin Venu has a width of 40mm, while a Fenix extends up to 50mm with both AMOLED and MIP display options. It is simply unrealistic to try to scale one display across every Garmin model. For this reason, many watchface designers market only to the die-hard, price-insensitive Fenix users, completely ignoring all other models.
 
-- [Watch face repo (GitHub)](https://github.com/wyattoconnell/amigo)
-- [Server repo (GitHub)](https://github.com/wyattocai-cpu/amigo-server)
+<div class="md-figure md-figure-wide">
+  <img src="resources/amigo-figma-early.png" alt="Early Amigo watchface Figma designs" />
+</div>
+
+My first designs, pictured above, were too biased towards the time display. The leaderboard, being Amigo's primary addition of value, should inhabit the largest and most central area of the display. This decision yielded the final design, seen below.
+
+<div class="md-figure md-figure-narrow">
+  <img src="resources/amigo-figma-final.png" alt="Final Amigo watchface Figma design" />
+</div>
+
+## Challenges
+
+The Garmin ConnectIQ store supports user-developed watchfaces in addition to fully built out applications, such as Spotify or Flappy Bird. I had never considered, however, that Amigo might require features beyond those of a watchface until it was far too late. The biggest limitation is customizability; exchanging information with a user, beyond what Garmin natively collects, is almost impossible.
+
+In my case, I needed a way for users to receive their unique code and pin, which is dynamically generated on startup. This issue initially seemed trivial. Every ConnectIQ watchface can read values from a `settings.xml` file that can be edited by the user from within their app. This is the mechanism I used for collecting user initials and friend codes, configuring which statistic to track, and selecting a watchface theme. One might assume, as I naively initially did, that the watch should also be able to write back to the `settings.xml`; specifically, that Amigo could display users' codes to them and have it persist indefinitely for later reference. This is not the case. The watchface settings file is read-only, compiled into each app package. In other words, the only way I could communicate with the user was through the watchface itself.
+
+This realization led to many more questions. I could display the code to the user temporarily, but what if they forgot it? What if there was some sort of dynamic link that would reveal the code when clicked? There was no solution that didn't significantly disrupt the user experience. In the end, I decided to display the code for 20 seconds on app download, with the option to show it again by toggling a setting. This flow can definitely be improved upon in future iterations.
+
+## Next Steps
+
+Despite achieving all my functional goals for the MVP, there is still much to be improved on this product. Aesthetically, I want to redesign the face itself to clarify the distinction between the leaderboard and personal stats, as well as an expanded visual hierarchy, making the face appear less flat.
+
+Churn has also been an issue. Not that I've sunk any effort into building a loyal user base, but I have noticed that very few people who download Amigo stick with it for very long. I suspect this is because the watchface only provides value once your friends use it too.
+
+Finally, I want to focus on the companion web app. We already track stats over time, but it would be fun to gamify other aspects, such as number of days as #1 among your friends, or a badge that is earned by topping the global leaderboard for a day.
+
+## Project State
+
+Amigo v1 was published to the ConnectIQ store on July 14th, 2026. As of writing this, a month later, it has been downloaded 200 times and recorded 1,328 cumulative user-days.
+
+My friends and I use this product every day, and I am motivated to work continuously to improve it. This project marks the first time strangers have gone out of their way to use a product I made completely on my own. It is a gratifying and addicting sensation. Hopefully it is just the beginning.
+
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
