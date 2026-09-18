@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Work+Sans:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="main.css" />
+    <title>BestBet · Wyatt O'Connell</title>
+  </head>
+  <body>
+    <header class="detail-header">
+      <div class="container detail-header-inner">
+        <a class="topnav-brand" href="index.html">wyatt o'connell</a>
+        <a class="back-link" href="index.html#projects">← Back to projects</a>
+      </div>
+    </header>
+
+    <main class="container md-page">
+      <article id="md-content" class="md-content"></article>
+    </main>
+
+    <script type="text/markdown" id="md-source">
+# BestBet
+
+*PHP · Postgres · JavaScript — 2024*
+
+This whole page is just markdown — edit the block in `project-bestbet.html`
+to dump in more write-up, screenshots, or links. Headings, lists, images,
+and code all pick up the same fonts as the rest of the site.
+
+## Overview
+
+BestBet is a fictional sports betting application focused on clear
+workflows, account management, and fast navigation across live game data.
+The project was built to practice full-stack integration across auth,
+odds display, and transactional flows.
+
+## Details
+
+Add more here: architecture notes, tricky bugs, screenshots, whatever's
+useful.
+
+![BestBet interface preview](resources/Screenshot%202024-09-02%20at%202.45.18%20PM.png)
+
+## Links
+
+- [Live demo](https://cs4640.cs.virginia.edu/qdy5bq/bestbet/)
+- [GitHub repo](https://github.com/wyattoconnell/bettingapp)
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+      const src = document.getElementById('md-source').textContent;
+      document.getElementById('md-content').innerHTML = marked.parse(src);
+    </script>
+  </body>
+</html>

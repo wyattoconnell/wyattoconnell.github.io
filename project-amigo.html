@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Work+Sans:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Amigo · Wyatt O'Connell</title>
+  </head>
+  <body>
+    <header class="detail-header">
+      <div class="container detail-header-inner">
+        <a class="topnav-brand" href="index.html">wyatt o'connell</a>
+        <a class="back-link" href="index.html#projects">← Back to projects</a>
+      </div>
+    </header>
+
+    <main class="container md-page">
+      <article id="md-content" class="md-content"></article>
+    </main>
+
+    <script type="text/markdown" id="md-source">
+# Amigo
+
+*Garmin Connect IQ · FastAPI · Next.js · Supabase*
+
+## The Problem
+
+I've been wearing a Garmin consistently since I was gifted one this past Christmas. Despite its wealth of features, I find myself really only using it to track my steps and record my runs. The watch is perfect for monitoring my pace and heart rate when I'm out on a jog, but when I finish, that data just sits on my watch… never to be used again.
+
+This, of course, is not a unique problem; anybody who's ever met a marathon runner knows that the longer one runs, the stronger their desire is to tell everyone about it. For most, the solution to this innate need to brag is Strava. Strava is a running/biking social media platform that maintains a tense yet symbiotic relationship with Garmin. Garmin users can record activities from their watches and upload and post via Strava.
+
+For me, my measly 7 followers did not justify this extra step. Uploading to Strava requires bouncing between two different apps, and often takes minutes to complete the data transfer.
+
+Nevertheless, I still had a desire to stay connected and present, in a sense, for my girlfriend's lunch-break walks in New York or my dad's marathon training back in California. So I decided to build a better way.
+
+## Amigo
+
+My goal for Amigo was to eliminate all barriers to sharing fitness data and increase competition and connectivity between friends. The result is a simplistically designed watchface, publicly available on the ConnectIQ store, that displays a live leaderboard of all your friends' daily stats.
+
+Upon downloading the watchface, each user is assigned a unique code. Sharing that code with a friend lets them start pulling that user's data onto their leaderboard immediately. Every user's data is held centrally in a database, which is queried via API by each watch at a cadence of 5 minutes.
+
+I also built a companion web app that serves as an aggregate leaderboard for all users, as well as housing FAQs and my privacy policy. Users can log in to the web app with their code to view advanced analytics and historical data.
+
+<div class="md-figure md-figure-portrait">
+  <img src="resources/amigo-app.png" alt="Amigo companion web app screenshot" />
+</div>
+
+## Architecture
+
+The beauty of this system is in its simplicity. It's not much more than an API request from each watch and a response resulting from a database query for the requested codes.
+
+
+<div class="arch-diagram">
+  <div class="arch-tier">
+    <div class="arch-branch">
+      <!-- TODO: point at github.com/wyattoconnell/amigo/tree/main/source -->
+      <a class="arch-node" href="#">
+        <span class="arch-node-title">Garmin Watches</span>
+        <span class="arch-node-sub">Connect IQ &middot; you + every friend, each running the same watchface</span>
+      </a>
+      <div class="arch-arrow arch-arrow-bidi">
+        <div class="arch-arrow-line">
+          <span class="arch-arrow-glyph">&uarr;</span>
+          <span class="arch-arrow-label">POST /sync (background) &mdash; each watch pushes its own steps, miles, calories</span>
+        </div>
+        <div class="arch-arrow-line">
+          <span class="arch-arrow-glyph">&darr;</span>
+          <span class="arch-arrow-label">GET /batch-stats, /leaderboard &mdash; friends' stats pulled back down to render on-device</span>
+        </div>
+      </div>
+    </div>
+    <div class="arch-branch">
+      <div class="arch-node" tabindex="0">
+        <span class="arch-node-title">Friend / User</span>
+        <span class="arch-node-sub">Browser, companion web app</span>
+      </div>
+      <div class="arch-arrow">
+        <span class="arch-arrow-glyph">&darr;</span>
+        <span class="arch-arrow-label">HTTPS</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="arch-group">
+    <span class="arch-group-label">Vercel</span>
+    <div class="arch-group-inner">
+      <!-- TODO: point at github.com/wyattocai-cpu/amigo-server/blob/main/main.py -->
+      <a class="arch-node arch-node-sm" href="#">
+        <span class="arch-node-title">FastAPI Backend</span>
+        <span class="arch-node-sub">main.py &middot; register &middot; login &middot; sync &middot; stats &middot; leaderboard</span>
+      </a>
+      <div class="arch-arrow arch-arrow-h">
+        <span class="arch-arrow-glyph">&larr;</span>
+        <span class="arch-arrow-label">fetch()</span>
+      </div>
+      <!-- TODO: point at github.com/wyattocai-cpu/amigo-server/tree/main/web -->
+      <a class="arch-node arch-node-sm" href="#">
+        <span class="arch-node-title">Next.js Web App</span>
+        <span class="arch-node-sub">web/ &middot; dashboard, leaderboard, signin</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="arch-arrow arch-arrow-single">
+    <span class="arch-arrow-glyph">&darr;</span>
+    <span class="arch-arrow-label">supabase-py &middot; read / write</span>
+  </div>
+
+  <!-- TODO: point at github.com/wyattocai-cpu/amigo-server (migration_*.sql) -->
+  <a class="arch-node arch-node-db" href="#">
+    <span class="arch-node-title">Supabase (Postgres)</span>
+    <span class="arch-node-sub">users &middot; stats &middot; rate_limits</span>
+  </a>
+</div>
+
+The database also runs cron jobs to reset users' statistics at midnight in each user's timezone and to delete old data and abandoned accounts.
+
+## Design
+
+The design for this product went through few iterations. I wanted to display as much information as possible without compromising the time or leaderboard visibility. I failed to consider, in my initial designs, the variety of displays I'd have to accommodate. A Garmin Venu has a width of 40mm, while a Fenix extends up to 50mm with both AMOLED and MIP display options. It is simply unrealistic to try to scale one display across every Garmin model. For this reason, many watchface designers market only to the die-hard, price-insensitive Fenix users, completely ignoring all other models.
+
+<div class="md-figure md-figure-wide">
+  <img src="resources/amigo-figma-early.png" alt="Early Amigo watchface Figma designs" />
+</div>
+
+My first designs, pictured above, were too biased towards the time display. The leaderboard, being Amigo's primary addition of value, should inhabit the largest and most central area of the display. This decision yielded the final design, seen below.
+
+<div class="md-figure md-figure-narrow">
+  <img src="resources/amigo-figma-final.png" alt="Final Amigo watchface Figma design" />
+</div>
+
+## Challenges
+
+The Garmin ConnectIQ store supports user-developed watchfaces in addition to fully built out applications, such as Spotify or Flappy Bird. I had never considered, however, that Amigo might require features beyond those of a watchface until it was far too late. The biggest limitation is customizability; exchanging information with a user, beyond what Garmin natively collects, is almost impossible.
+
+In my case, I needed a way for users to receive their unique code and pin, which is dynamically generated on startup. This issue initially seemed trivial. Every ConnectIQ watchface can read values from a `settings.xml` file that can be edited by the user from within their app. This is the mechanism I used for collecting user initials and friend codes, configuring which statistic to track, and selecting a watchface theme. One might assume, as I naively initially did, that the watch should also be able to write back to the `settings.xml`; specifically, that Amigo could display users' codes to them and have it persist indefinitely for later reference. This is not the case. The watchface settings file is read-only, compiled into each app package. In other words, the only way I could communicate with the user was through the watchface itself.
+
+This realization led to many more questions. I could display the code to the user temporarily, but what if they forgot it? What if there was some sort of dynamic link that would reveal the code when clicked? There was no solution that didn't significantly disrupt the user experience. In the end, I decided to display the code for 20 seconds on app download, with the option to show it again by toggling a setting. This flow can definitely be improved upon in future iterations.
+
+## Next Steps
+
+Despite achieving all my functional goals for the MVP, there is still much to be improved on this product. Aesthetically, I want to redesign the face itself to clarify the distinction between the leaderboard and personal stats, as well as an expanded visual hierarchy, making the face appear less flat.
+
+Churn has also been an issue. Not that I've sunk any effort into building a loyal user base, but I have noticed that very few people who download Amigo stick with it for very long. I suspect this is because the watchface only provides value once your friends use it too.
+
+Finally, I want to focus on the companion web app. We already track stats over time, but it would be fun to gamify other aspects, such as number of days as #1 among your friends, or a badge that is earned by topping the global leaderboard for a day.
+
+## Project State
+
+Amigo v1 was published to the ConnectIQ store on July 14th, 2026. As of writing this, a month later, it has been downloaded 200 times and recorded 1,328 cumulative user-days.
+
+My friends and I use this product every day, and I am motivated to work continuously to improve it. This project marks the first time strangers have gone out of their way to use a product I made completely on my own. It is a gratifying and addicting sensation. Hopefully it is just the beginning.
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+      const src = document.getElementById('md-source').textContent;
+      document.getElementById('md-content').innerHTML = marked.parse(src);
+    </script>
+  </body>
+</html>

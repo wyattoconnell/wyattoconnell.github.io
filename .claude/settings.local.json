@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -m http.server 8934)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:8934/index.html)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:8934/main.css)",
+      "Read(//private/tmp/**)",
+      "Bash(jobs)",
+      "Bash(python3 -c ' *)",
+      "mcp__drawio__open_drawio_xml",
+      "Bash(git -C /Users/leahoconnell/amigo remote -v)",
+      "Bash(git -C /Users/claude/repo/amigo-server remote -v)",
+      "Bash(curl -s -o marked.min.js https://cdn.jsdelivr.net/npm/marked/marked.min.js)"
+    ]
+  }
+}

@@ -299,155 +299,270 @@
         <div class="pt-2">
             <div class="steam-engine fixed-bottom" style="opacity:0;"></div>
         </div>
+      </nav>
+    </header>
 
-    
-    
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-        <script>
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-              anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-        
-                const targetId = this.getAttribute('href').substring(1);
-                const targetElement = document.getElementById(targetId);
-        
-                if (targetElement) {
-                  targetElement.scrollIntoView({
-                    behavior: 'smooth'
-                  });
-                }
-              });
-            });
+    <div class="container">
+      <section class="hero" id="top">
+        <nav class="sidenav" aria-label="Primary">
+          <ul>
+            <li><a href="#about">about</a></li>
+            <li><a href="#experience">experience</a></li>
+            <li><a href="#projects">projects</a></li>
+            <li><a href="#" data-resume-link target="_blank" rel="noopener">resume</a></li>
+            <li>
+              <div class="icon-row">
+                <a class="icon-link" href="https://github.com/wyattoconnell" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon"><use href="#icon-github"></use></svg></a>
+                <a class="icon-link" href="https://www.linkedin.com/in/wyatt-o-connell-299185240/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon"><use href="#icon-linkedin"></use></svg></a>
+                <a class="icon-link" href="https://medium.com/@wyattmoconnell" target="_blank" rel="noopener" aria-label="Medium"><svg class="icon"><use href="#icon-medium"></use></svg></a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <div>
+          <h1 class="hero-name">wyatt<br />o'connell</h1>
+          <p class="hero-tagline">software engineer · platform infrastructure & full-stack web</p>
+        </div>
+      </section>
 
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('nav a');
+      <section class="section" id="about">
+        <h2 class="section-title">about</h2>
+        <div class="about-body">
+          <img class="about-photo" src="resources/MyProject.png" alt="Portrait of Wyatt" />
+          <div class="about-text">
+            <p>
+              Hi, I'm Wyatt: a passionate developer with extensive experience in software engineering and a strong
+              eagerness to learn. Through personal projects, academic endeavors, and internships, I've significantly
+              contributed to various aspects of development, including system design, full-stack development,
+              testing, and DevOps. I thrive in collaborative environments and am driven by the opportunity to
+              express creativity in my work, as is evident in my personal projects. I'm seeking to join a dedicated
+              team where I can make a meaningful impact. In my free time, I like to play board games, basketball,
+              and ride my mountain bike.
+            </p>
+          </div>
+        </div>
+      </section>
 
-            const options = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.3 
-                };
+      <section class="section" id="experience">
+        <h2 class="section-title">experience</h2>
+        <div class="entry-list">
+            <div class="entry">
+            <div class="entry-meta">
+              <span class="place">Appian</span>
+              McClean, VA<br />
+              October 2025 – Present
+            </div>
+            <div class="entry-body">
+              <h3 class="entry-title">Software Engineer</h3>
+              <ul>
+                <li>Own CI/CD platform infrastructure that other engineering teams build on to ship safely; vetting and shipping code to a low-code platform used by 5K+ enterprise customers</li>
+                <li>Co-designed the shared pipeline architecture for a company-wide migration from GitHub/Jenkins to GitLab across 1,000+ engineers, including incremental, dependency-aware CI job selection to cut build cost and latency</li>
+                <li>Built an AMI factory (Jenkins controllers + GitLab runner EC2 fleets) as a reusable primitive other teams provision against, owning vulnerability remediation and lifecycle management</li>
+              </ul>
+            </div>
+          </div>
 
-                const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                    const currentId = entry.target.getAttribute('id');
-                    navLinks.forEach(link => {
-                        if (link.getAttribute('href').includes(currentId)) {
-                        link.classList.add('active');
-                        } else {
-                        link.classList.remove('active');
-                        }
-                    });
-                    }
-                });
-                }, options);
+          <div class="entry">
+            <div class="entry-meta">
+              <span class="place">UVa</span>
+              Charlottesville, VA<br />
+              January 2024 – May 2025
+            </div>
+            <div class="entry-body">
+              <h3 class="entry-title">Teaching Assistant</h3>
+              <ul>
+                <li>Collaborate with faculty to design and refine a curriculum focused on modern web application programming languages</li>
+                <li>Advise student groups on the feasibility and best practices for their web application projects, ensuring alignment with design goals and industry standards</li>
+                <li>Grade tests and project sprints, providing constructive feedback to enhance student learning</li>
+              </ul>
+            </div>
+          </div>
 
-                sections.forEach(section => {
-                observer.observe(section);
-                });
+          <div class="entry">
+            <div class="entry-meta">
+              <span class="place">Scale AI</span>
+              Remote/Freelance<br />
+              December 2023 – May 2025
+            </div>
+            <div class="entry-body">
+              <h3 class="entry-title">Expert Contributor</h3>
+              <ul>
+                <li>Solved intricate programming problems and crafted responses to coding-related prompts for training large language models</li>
+                <li>Provided in-depth analysis of AI generated code</li>
+              </ul>
+            </div>
+          </div>
 
-                const gui = document.getElementById('gui');
-                const niche = document.getElementById('niche');
-                const portfol = document.getElementById('portfol');
-                const django = document.getElementById('django');
-                const body1 = document.getElementById('body1');
-                const body2 = document.getElementById('body2');
-                const body3 = document.getElementById('body3');
-                const body4 = document.getElementById('body4');
-            
+          <div class="entry">
+            <div class="entry-meta">
+              <span class="place">KBR</span>
+              Chantilly, VA<br />
+              May – August 2024
+            </div>
+            <div class="entry-body">
+              <h3 class="entry-title">NSS Systems Engineering Intern</h3>
+              <ul>
+                <li>Collaborated with a team to develop a digitally engineered space system testing workflow</li>
+                <li>Leveraged Kubernetes to orchestrate application containers and databases</li>
+                <li>Contributed to an Angular frontend application to intuitively display data using JavaScript libraries</li>
+                <li>Set up a MySQL database for querying testing data</li>
+              </ul>
+            </div>
+          </div>
 
-                function pxToVw(pxValue) {
-                    const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
-                    const vwValue = (pxValue / vw) * 100;
-                    
-                    return vwValue;
-                }
+          <div class="entry">
+            <div class="entry-meta">
+              <span class="place">Favorite Coursework</span>
+              University of Virginia
+            </div>
+            <div class="entry-body">
+              <p class="coursework-text">
+                Internet Scale Applications, Programming Languages for Web Apps, New Product Development, Algorithmic Investing, Advanced Software Development, and many more.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <section class="section" id="projects">
+        <h2 class="section-title">projects</h2>
+        <div class="entry-list">
+          <div class="entry">
+            <div class="entry-meta">
+              <span class="place">Amigo</span>
+              2026
+              <div class="stack-row">
+                <p class="entry-stack">Garmin Connect IQ · FastAPI · Next.js · Supabase</p>
+              </div>
+            </div>
+            <div class="entry-body">
+              <div class="entry-split">
+                <div class="entry-split-text">
+                  <h3 class="entry-title">Garmin watch face + companion app fitness leaderboard</h3>
+                  <ul>
+                    <li>Built a Connect IQ watch face that background-syncs steps, distance, and calories to a shared backend</li>
+                    <li>Designed a friend-code identity system (no email/password) shared across the watch face and web app</li>
+                    <li>Built a FastAPI + Supabase backend serving both the device and a Next.js companion dashboard</li>
+                  </ul>
+                  <div class="entry-links">
+                    <a class="demo-link" href="https://amigo-watchface.app/" target="_blank" rel="noopener"><svg class="icon"><use href="#icon-external"></use></svg> Live Demo</a>
+                    <a class="learn-more" href="project-amigo.html">Learn more →</a>
+                  </div>
+                </div>
+                <div class="demo-preview">
+                  <div class="demo-preview-chrome">
+                    <span class="demo-preview-dots"><span></span><span></span><span></span></span>
+                    <span class="demo-preview-url">amigo-watchface.app</span>
+                  </div>
+                  <div class="demo-preview-frame">
+                    <img src="resources/preview-amigo.png" loading="lazy" alt="Amigo dashboard screenshot" />
+                  </div>
+                  <a class="demo-preview-link" href="https://amigo-watchface.app/" target="_blank"
+                     rel="noopener" aria-label="Open live demo of Amigo"></a>
+                </div>
+              </div>
+            </div>
+          </div>
 
-                function guiMouseEnter() {
-                const djangoX = django.getBoundingClientRect().left;
-                const portfolX = portfol.getBoundingClientRect().left;
-                const jump = djangoX-portfolX;
+          <div class="entry">
+            <div class="entry-meta">
+              <span class="place">Intersections</span>
+              2025
+              <div class="stack-row">
+                <p class="entry-stack">Angular · Figma · Supabase</p>
+                <a class="icon-link" href="https://github.com/wyattoconnell/intersections" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon"><use href="#icon-github"></use></svg></a>
+              </div>
+            </div>
+            <div class="entry-body">
+              <div class="entry-split">
+                <div class="entry-split-text">
+                  <h3 class="entry-title">Daily word puzzle game</h3>
+                  <ul>
+                    <li>Designed an original puzzle format inspired by Wordle and Connections</li>
+                    <li>Focused on crisp interaction design and clean game-state management</li>
+                    <li>Next up: local storage for streaks, onboarding instructions, and mobile scaling</li>
+                  </ul>
+                  <div class="entry-links">
+                    <a class="demo-link" href="https://intersections.in/#/" target="_blank" rel="noopener"><svg class="icon"><use href="#icon-external"></use></svg> Live Demo</a>
+                    <!-- <a class="learn-more" href="project-intersections.html">Learn more →</a> -->
+                  </div>
+                </div>
+                <div class="demo-preview">
+                  <div class="demo-preview-chrome">
+                    <span class="demo-preview-dots"><span></span><span></span><span></span></span>
+                    <span class="demo-preview-url">intersections.in</span>
+                  </div>
+                  <div class="demo-preview-frame">
+                    <img src="resources/preview-intersections.png" loading="lazy" alt="Intersections puzzle screenshot" />
+                  </div>
+                  <a class="demo-preview-link" href="https://intersections.in/#/" target="_blank"
+                     rel="noopener" aria-label="Open live demo of Intersections"></a>
+                </div>
+              </div>
+            </div>
+          </div>
 
-                gui.classList.add('gui-hovered');
-                body4.classList.add('gui-hovered');
-                gui.style.transform = 'translate(0px, -30vh)';
-                niche.style.transform = 'translate(0px, -30vh)';
-                portfol.style.transform = `translateX(${jump}px)`;
-                }
+                    <div class="entry">
+            <div class="entry-meta">
+              <span class="place">The Niche Index</span>
+              2024
+              <div class="stack-row">
+                <p class="entry-stack">React · Node.js · Spotify API</p>
+                <a class="icon-link" href="https://github.com/wyattoconnell/NicheIndex" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon"><use href="#icon-github"></use></svg></a>
+              </div>
+            </div>
+            <div class="entry-body">
+              <h3 class="entry-title">Music library "obscurity score" calculator</h3>
+              <ul>
+                <li>Designed a multi-factor scoring model combining track virality and artist popularity</li>
+                <li>Built a UI that mirrors Spotify's design language while introducing new views</li>
+                <li>Taught myself React and Node.js, and integrated the Spotify API for live user data</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
 
-                function guiMouseLeave() {
-                gui.classList.remove('gui-hovered');
-                body4.classList.remove('gui-hovered');
-                gui.style.transform = 'none';
-                niche.style.transform = 'none';
-                portfol.style.transform = 'none';
-                gui.scrollTop = 0;
-                }
+      <footer class="footer">
+        <div class="footer-links">
+          <a href="#" data-resume-link target="_blank" rel="noopener">Resume</a>
+          <a href="mailto:wyattmoconnell@gmail.com">Email</a>
+          <a class="icon-link" href="https://github.com/wyattoconnell" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon"><use href="#icon-github"></use></svg></a>
+          <a class="icon-link" href="https://www.linkedin.com/in/wyatt-o-connell-299185240/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon"><use href="#icon-linkedin"></use></svg></a>
+          <a class="icon-link" href="https://medium.com/@wyattmoconnell" target="_blank" rel="noopener" aria-label="Medium"><svg class="icon"><use href="#icon-medium"></use></svg></a>
+        </div>
+      </footer>
+    </div>
 
-                function nicheMouseEnter() {
+    <script>
+      const RESUME_URL = 'resources/OconnellResume2025.pdf';
+      document.querySelectorAll('[data-resume-link]').forEach((link) => {
+        link.href = RESUME_URL;
+      });
 
-                const djangoX = django.getBoundingClientRect().left;
-                const portfolX = portfol.getBoundingClientRect().left;
-                const jump = djangoX-portfolX;
+      const topnav = document.getElementById('topnav');
+      const hero = document.getElementById('top');
+      const hamburgerBtn = document.getElementById('hamburgerBtn');
+      const topnavMenu = document.getElementById('topnavMenu');
 
-                var jumpVW = pxToVw(jump);
-                jumpVW = -1*(jumpVW + 30);
+      function onScroll() {
+        const threshold = hero.offsetTop + hero.offsetHeight - 80;
+        if (window.scrollY > threshold) {
+          topnav.classList.add('visible');
+        } else {
+          topnav.classList.remove('visible');
+          topnav.classList.remove('open');
+          hamburgerBtn.setAttribute('aria-expanded', 'false');
+        }
+      }
 
-                niche.classList.add('niche-hovered');
-                body2.classList.add('niche-hovered');
-                niche.style.transform = 'translate(-30vw, 0)';
-                gui.style.transform = 'translate(0px, 55vh)';
-                portfol.style.transform = 'translate(-30vw, 0px)';
-                django.style.transform = `translateX(${jumpVW}vw)`;
-                }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
 
-                function nicheMouseLeave() {
-                niche.classList.remove('niche-hovered');
-                body2.classList.remove('niche-hovered');
-                niche.style.transform = 'none';
-                gui.style.transform = 'none';
-                portfol.style.transform = 'none';
-                django.style.transform = 'none';
-                niche.scrollTop = 0;
-                }
-
-                function djangoMouseEnter() {
-                django.classList.add('django-hovered');
-                body3.classList.add('django-hovered');
-                django.style.transform = 'translate(0vw, -30vh)';
-                gui.style.transform = 'translate(30vw, -30vh)';
-                portfol.style.transform = 'translate(10vw, -30vh)';
-                niche.style.transform = 'translate(10vw, -30vh)';
-                }
-
-                function djangoMouseLeave() {
-                django.classList.remove('django-hovered');
-                body3.classList.remove('django-hovered');
-                django.style.transform = 'none';
-                gui.style.transform = 'none';
-                portfol.style.transform = 'none';
-                niche.style.transform = 'none';
-                django.scrollTop = 0;
-                }
-
-                function portfolMouseEnter() {
-                portfol.classList.add('portfol-hovered');
-                body1.classList.add('portfol-hovered');
-                niche.style.transform = 'translate(13vw, 0px)';
-                gui.style.transform = 'translateY(17vh)';
-                django.style.transform = 'translateY(17vh)';
-                }
-
-                function portfolMouseLeave() {
-                portfol.classList.remove('portfol-hovered');
-                body1.classList.remove('portfol-hovered');
-                niche.style.transform = 'none';
-                gui.style.transform = 'none';
-                django.style.transform = 'none';
-                portfol.scrollTop = 0;
-                }
+      hamburgerBtn.addEventListener('click', () => {
+        const isOpen = topnav.classList.toggle('open');
+        hamburgerBtn.setAttribute('aria-expanded', String(isOpen));
+      });
 
                 gui.addEventListener('click', guiMouseEnter);
                 gui.addEventListener('mouseleave', guiMouseLeave);
