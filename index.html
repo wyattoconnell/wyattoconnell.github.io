@@ -22,9 +22,9 @@
         <path d="M10 1h5v5h-1.5V3.56L7.03 10.03 6 9l6.44-6.44H10V1z" />
         <path d="M2.5 3A1.5 1.5 0 0 0 1 4.5v9A1.5 1.5 0 0 0 2.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9h-1.5v4.5h-9v-9H7V3H2.5z" />
       </symbol>
-      <symbol id="icon-medium" viewBox="0 0 24 24">
+      <!-- <symbol id="icon-medium" viewBox="0 0 24 24">
         <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z" />
-      </symbol>
+      </symbol> -->
     </svg>
 
     <header class="topnav" id="topnav">
@@ -82,13 +82,7 @@
           <img class="about-photo" src="resources/MyProject.png" alt="Portrait of Wyatt" />
           <div class="about-text">
             <p>
-              Hi, I'm Wyatt: a passionate developer with extensive experience in software engineering and a strong
-              eagerness to learn. Through personal projects, academic endeavors, and internships, I've significantly
-              contributed to various aspects of development, including system design, full-stack development,
-              testing, and DevOps. I thrive in collaborative environments and am driven by the opportunity to
-              express creativity in my work, as is evident in my personal projects. I'm seeking to join a dedicated
-              team where I can make a meaningful impact. In my free time, I like to play board games, basketball,
-              and ride my mountain bike.
+              Hi, I'm Wyatt. I'm passionate about games and puzzles, and I love building things that are fun to look at and even more fun to lose. This shines through in my personal projects, like the daily logic puzzle game I designed to challenge my friends, and the Garmin watchface built around a timezone-normalized leaderboard, which picked up 200+ users in its first 2 weeks. By day, I work on developer infrastructure at Appian, keeping CI/CD running smoothly for 1,000+ engineers. I care as much about how something feels to use as whether it works. When I'm not building, I'm probably playing board games, basketball, or out on my mountain bike.
             </p>
           </div>
         </div>
@@ -104,11 +98,13 @@
               October 2025 – Present
             </div>
             <div class="entry-body">
-              <h3 class="entry-title">Software Engineer</h3>
+              <h3 class="entry-title">Software Engineer II</h3>
               <ul>
-                <li>Own CI/CD platform infrastructure that other engineering teams build on to ship safely; vetting and shipping code to a low-code platform used by 5K+ enterprise customers</li>
-                <li>Co-designed the shared pipeline architecture for a company-wide migration from GitHub/Jenkins to GitLab across 1,000+ engineers, including incremental, dependency-aware CI job selection to cut build cost and latency</li>
-                <li>Built an AMI factory (Jenkins controllers + GitLab runner EC2 fleets) as a reusable primitive other teams provision against, owning vulnerability remediation and lifecycle management</li>
+                <li>Ship recurring improvements to internal CI/CD tooling and monorepo pipeline config, continuously balancing test reliability, developer experience, and infra cost as core product tradeoffs</li>
+                <li>Contributed to a team effort that reduced infra failure rate from 16% to near-zero and eliminated job queue backlogs, through Appian's GitLab migration and CI pipeline refactor on a 250k-commit monorepo</li>
+                <li>Relied on to troubleshoot CI/CD issues on the fly, reviewing merge requests and triaging feature requests in real time as sole rotating point of contact for 100+ engineering teams across 4 support channels</li>
+                <li>Trusted with org-wide admin access to GitLab/GitHub (branch protection, merge approvals, access control) and full lifecycle ownership of the Jenkins/GitLab runner EC2 fleet — including vulnerability remediation </li>
+                <li>Led integration of an internal AI code-review bot into GitLab MR workflows across my team's repos, reducing common MR mistakes and the need for maintainer intervention</li>
               </ul>
             </div>
           </div>
@@ -122,9 +118,8 @@
             <div class="entry-body">
               <h3 class="entry-title">Teaching Assistant</h3>
               <ul>
-                <li>Collaborate with faculty to design and refine a curriculum focused on modern web application programming languages</li>
-                <li>Advise student groups on the feasibility and best practices for their web application projects, ensuring alignment with design goals and industry standards</li>
-                <li>Grade tests and project sprints, providing constructive feedback to enhance student learning</li>
+                <li>TA for CS 4640 (Programming Languages for Web Applications), advising ~80 students on their semester-long fullstack web app projects, aligning their system designs with industry best practices</li>
+                <li>Graded assignments and provided feedback across multiple project sprints</li>
               </ul>
             </div>
           </div>
@@ -138,8 +133,8 @@
             <div class="entry-body">
               <h3 class="entry-title">Expert Contributor</h3>
               <ul>
-                <li>Solved intricate programming problems and crafted responses to coding-related prompts for training large language models</li>
-                <li>Provided in-depth analysis of AI generated code</li>
+                <li>Contracted expert evaluator grading and editing LLM-generated code solutions and authoring adversarial coding
+problems to probe model weaknesses</li>
               </ul>
             </div>
           </div>
@@ -153,10 +148,7 @@
             <div class="entry-body">
               <h3 class="entry-title">NSS Systems Engineering Intern</h3>
               <ul>
-                <li>Collaborated with a team to develop a digitally engineered space system testing workflow</li>
-                <li>Leveraged Kubernetes to orchestrate application containers and databases</li>
-                <li>Contributed to an Angular frontend application to intuitively display data using JavaScript libraries</li>
-                <li>Set up a MySQL database for querying testing data</li>
+                <li>Owned database-to-deployment layer of a Kubernetes-orchestrated satellite systems testing dashboard, building an Angular frontend to visualize structured test data for engineering review and sales demos</li>
               </ul>
             </div>
           </div>
@@ -191,10 +183,15 @@
                 <div class="entry-split-text">
                   <h3 class="entry-title">Garmin watch face + companion app fitness leaderboard</h3>
                   <ul>
-                    <li>Built a Connect IQ watch face that background-syncs steps, distance, and calories to a shared backend</li>
-                    <li>Designed a friend-code identity system (no email/password) shared across the watch face and web app</li>
-                    <li>Built a FastAPI + Supabase backend serving both the device and a Next.js companion dashboard</li>
-                  </ul>
+                    <li>Built and shipped Amigo, a Garmin ConnectIQ watchface + React/TypeScript companion web app, reaching 200+
+downloads in first 2 weeks with zero paid marketing</li>
+                    <li>Published a timezone-normalized leaderboard, reconciling user activity across timezones into a unified daily
+                    ranking</li>
+                    <li>Designed the onboarding/account-creation flow around platform constraints, iterating on UX to make account
+setup possible entirely on-device</li>
+                    <li>Built auth system (alphanumeric code + bcrypt-hashed PIN, rate-limited endpoints) appropriate to the app's
+low-sensitivity data footprint</li>
+</ul>
                   <div class="entry-links">
                     <a class="demo-link" href="https://amigo-watchface.app/" target="_blank" rel="noopener"><svg class="icon"><use href="#icon-external"></use></svg> Live Demo</a>
                     <a class="learn-more" href="project-amigo.html">Learn more →</a>
@@ -229,9 +226,8 @@
                 <div class="entry-split-text">
                   <h3 class="entry-title">Daily word puzzle game</h3>
                   <ul>
-                    <li>Designed an original puzzle format inspired by Wordle and Connections</li>
-                    <li>Focused on crisp interaction design and clean game-state management</li>
-                    <li>Next up: local storage for streaks, onboarding instructions, and mobile scaling</li>
+                    <li>Architected and built a daily logic puzzle game (Angular/TypeScript frontend, Python/Postgres backend)</li>
+                    <li>Iterated visual layout designs on Figma before implementing from scratch, no UI framework</li>
                   </ul>
                   <div class="entry-links">
                     <a class="demo-link" href="https://intersections.in/#/" target="_blank" rel="noopener"><svg class="icon"><use href="#icon-external"></use></svg> Live Demo</a>
@@ -280,13 +276,13 @@
           <a href="mailto:wyattmoconnell@gmail.com">Email</a>
           <a class="icon-link" href="https://github.com/wyattoconnell" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon"><use href="#icon-github"></use></svg></a>
           <a class="icon-link" href="https://www.linkedin.com/in/wyatt-o-connell-299185240/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon"><use href="#icon-linkedin"></use></svg></a>
-          <a class="icon-link" href="https://medium.com/@wyattmoconnell" target="_blank" rel="noopener" aria-label="Medium"><svg class="icon"><use href="#icon-medium"></use></svg></a>
+          <!-- <a class="icon-link" href="https://medium.com/@wyattmoconnell" target="_blank" rel="noopener" aria-label="Medium"><svg class="icon"><use href="#icon-medium"></use></svg></a> -->
         </div>
       </footer>
     </div>
 
     <script>
-      const RESUME_URL = 'resources/OconnellResume2025.pdf';
+      const RESUME_URL = 'resources/OconnellResume.pdf';
       document.querySelectorAll('[data-resume-link]').forEach((link) => {
         link.href = RESUME_URL;
       });
